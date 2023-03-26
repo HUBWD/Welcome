@@ -54,7 +54,7 @@ return{
         Text.BackgroundTransparency = 1.000
         Text.Size = UDim2.new(0.600000024, 0, 1, 0)
         Text.ZIndex = 4
-        Text.Font = Font.new('rbxasset://fonts/families/Roboto.json',Enum.FontWeight.Normal,Enum.FontStyle.Normal);
+        Text.Font = Font.new('rbxasset://fonts/families/Roboto.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
         Text.Text = "Press Enter"
         Text.TextColor3 = Color3.fromRGB(47, 47, 47)
         Text.TextSize = 12.000
@@ -183,7 +183,7 @@ return{
         call.Size = UDim2.new(1, 0, 1, 0)
         call.ZIndex = 8
         call.AutoButtonColor = false
-        call.Font = Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Normal,Enum.FontStyle.Normal);
+        call.Font = Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
         call.Text = ""
         call.TextColor3 = Color3.fromRGB(0, 0, 0)
         call.TextSize = 14.000
@@ -241,7 +241,7 @@ return{
         call_2.Size = UDim2.new(1, 0, 1, 0)
         call_2.ZIndex = 8
         call_2.AutoButtonColor = false
-        call_2Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Normal,Enum.FontStyle.Normal);
+        call_2Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
         call_2.Text = ""
         call_2.TextColor3 = Color3.fromRGB(0, 0, 0)
         call_2.TextSize = 14.000
@@ -300,7 +300,7 @@ return{
         call_3.Size = UDim2.new(1, 0, 1, 0)
         call_3.ZIndex = 8
         call_3.AutoButtonColor = false
-        call_3Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Normal,Enum.FontStyle.Normal);
+        call_3Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
         call_3.Text = ""
         call_3.TextColor3 = Color3.fromRGB(0, 0, 0)
         call_3.TextSize = 14.000
@@ -359,7 +359,7 @@ return{
         call_4.Size = UDim2.new(1, 0, 1, 0)
         call_4.ZIndex = 8
         call_4.AutoButtonColor = false
-        call_4Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Normal,Enum.FontStyle.Normal);
+        call_4Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
         call_4.Text = ""
         call_4.TextColor3 = Color3.fromRGB(0, 0, 0)
         call_4.TextSize = 14.000
@@ -407,7 +407,7 @@ return{
         content.BackgroundTransparency = 1.000
         content.Position = UDim2.new(0.5, 0, 0, 110)
         content.Size = UDim2.new(0, 500, 0, 40)
-        content.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Normal,Enum.FontStyle.Normal);
+        content.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
         content.Text = "Pick our suggestion or change it "
         content.TextColor3 = Color3.fromRGB(45, 57, 73)
         content.TextSize = 16.000
@@ -422,7 +422,7 @@ return{
         Sub_Title.BackgroundTransparency = 1.000
         Sub_Title.Position = UDim2.new(0.5, 0, 0, 65)
         Sub_Title.Size = UDim2.new(0, 500, 0, 40)
-        Sub_Title.Font = Font.new('rbxasset://fonts/families/Roboto.json',Enum.FontWeight.Normal,Enum.FontStyle.Normal);
+        Sub_Title.Font = Font.new('rbxasset://fonts/families/Roboto.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
         Sub_Title.Text = "Confirm your text language"
         Sub_Title.TextColor3 = Color3.fromRGB(45, 57, 73)
         Sub_Title.TextSize = 34.000
@@ -481,7 +481,7 @@ return{
         Text.BackgroundTransparency = 1.000
         Text.Size = UDim2.new(0.600000024, 0, 1, 0)
         Text.ZIndex = 4
-        Text.Font = Font.new('rbxasset://fonts/families/Roboto.json',Enum.FontWeight.Normal,Enum.FontStyle.Normal);
+        Text.Font = Font.new('rbxasset://fonts/families/Roboto.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
         Text.Text = "Press Enter"
         Text.TextColor3 = Color3.fromRGB(47, 47, 47)
         Text.TextSize = 12.000
@@ -677,7 +677,7 @@ return{
         Text.BackgroundTransparency = 1.000
         Text.Size = UDim2.new(0.600000024, 0, 1, 0)
         Text.ZIndex = 4
-        Text.Font = Font.new('rbxasset://fonts/families/Roboto.json',Enum.FontWeight.Normal,Enum.FontStyle.Normal);
+        Text.Font = Font.new('rbxasset://fonts/families/Roboto.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
         Text.Text = "Press Enter"
         Text.TextColor3 = Color3.fromRGB(47, 47, 47)
         Text.TextSize = 12.000
@@ -866,7 +866,7 @@ return{
         Cool.Size = UDim2.new(1, 0, 0, 33)
         Cool.ZIndex = 3
         Cool.AutoButtonColor = false
-        Cool.Font = Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Normal,Enum.FontStyle.Normal);
+        Cool.Font = Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
         Cool.Text = ""
         Cool.TextColor3 = Color3.fromRGB(0, 0, 0)
         Cool.TextSize = 14.000
@@ -895,7 +895,7 @@ return{
         HighContrast.Size = UDim2.new(1, 0, 0, 33)
         HighContrast.ZIndex = 3
         HighContrast.AutoButtonColor = false
-        HighContrast.Font = Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Normal,Enum.FontStyle.Normal);
+        HighContrast.Font = Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
         HighContrast.Text = ""
         HighContrast.TextColor3 = Color3.fromRGB(0, 0, 0)
         HighContrast.TextSize = 14.000
@@ -953,7 +953,7 @@ return{
         Pastel.Size = UDim2.new(1, 0, 0, 33)
         Pastel.ZIndex = 3
         Pastel.AutoButtonColor = false
-        Pastel.Font = Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Normal,Enum.FontStyle.Normal);
+        Pastel.Font = Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
         Pastel.Text = ""
         Pastel.TextColor3 = Color3.fromRGB(0, 0, 0)
         Pastel.TextSize = 14.000
@@ -1039,7 +1039,7 @@ return{
         TextBox_.Size = UDim2.new(1, -50, 1, 0)
         TextBox_.ZIndex = 3
         TextBox_.ClearTextOnFocus = false
-        TextBox_.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Normal,Enum.FontStyle.Normal);
+        TextBox_.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
         TextBox_.ShowNativeInput = false
         TextBox_.Text = "..\\workspace\\HUBWD"
         TextBox_.TextColor3 = Color3.fromRGB(45, 57, 73)
@@ -1068,7 +1068,7 @@ return{
         content.BackgroundTransparency = 1.000
         content.Position = UDim2.new(0.5, 0, 0, 110)
         content.Size = UDim2.new(0, 500, 0, 40)
-        content.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Normal,Enum.FontStyle.Normal);
+        content.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
         content.Text = "Pick our suggestion or change it "
         content.TextColor3 = Color3.fromRGB(45, 57, 73)
         content.TextSize = 16.000
@@ -1083,7 +1083,7 @@ return{
         Title_10.BackgroundTransparency = 1.000
         Title_10.Position = UDim2.new(0.5, 0, 0, 50)
         Title_10.Size = UDim2.new(0, 200, 0, 15)
-        Title_10.Font = Font.new('rbxasset://fonts/families/Roboto.json',Enum.FontWeight.Normal,Enum.FontStyle.Normal);
+        Title_10.Font = Font.new('rbxasset://fonts/families/Roboto.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
         Title_10.Text = "SETUP"
         Title_10.TextColor3 = Color3.fromRGB(63, 124, 197)
         Title_10.TextSize = 14.000
@@ -1096,7 +1096,7 @@ return{
         Sub_Title.BackgroundTransparency = 1.000
         Sub_Title.Position = UDim2.new(0.5, 0, 0, 65)
         Sub_Title.Size = UDim2.new(0, 500, 0, 40)
-        Sub_Title.Font = Font.new('rbxasset://fonts/families/Roboto.json',Enum.FontWeight.Normal,Enum.FontStyle.Normal);
+        Sub_Title.Font = Font.new('rbxasset://fonts/families/Roboto.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
         Sub_Title.Text = "Choose our preference"
         Sub_Title.TextColor3 = Color3.fromRGB(45, 57, 73)
         Sub_Title.TextSize = 34.000
