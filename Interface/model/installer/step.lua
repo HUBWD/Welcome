@@ -1,1109 +1,1143 @@
-return{
-    ["Step1"]=function(Parent)
-        local step1 = Instance.new("Frame",Parent)
-        local Button = Instance.new("ImageLabel")
-        local Sub_Frame = Instance.new("Frame")
-        local arrow_left = Instance.new("ImageLabel")
-        local Text = Instance.new("TextLabel")
-        local call = Instance.new("TextButton")
-        local Sub_title = Instance.new("TextLabel")
-        local Title = Instance.new("TextLabel")
+return (function(Parent)
+	--[=[
+	 d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+	88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+	88      88    88    88            odD'      88      88    88 88ooo88 
+	88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+	88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88 
+	 Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER
+	 
+	Link plugin: https://github.com/uniquadev/GuiToLuaConverter
+	]=]
 
-        step1.Name = "step1"
-        step1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        step1.BackgroundTransparency = 1.000
-        step1.BorderSizePixel = 0
-        step1.Size = UDim2.new(1, 0, 1, 0)
+	local G2L = {};
 
-        Button.Name = "Button"
-        Button.Parent = step1
-        Button.AnchorPoint = Vector2.new(0.5, 1)
-        Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Button.BackgroundTransparency = 1.000
-        Button.Position = UDim2.new(0.5, 0, 1, -90)
-        Button.Size = UDim2.new(0, 184, 0, 50)
-        Button.ZIndex = 3
-        Button.Image = "rbxassetid://3570695787"
-        Button.ImageColor3 = Color3.fromRGB(46, 135, 255)
-        Button.ScaleType = Enum.ScaleType.Slice
-        Button.SliceCenter = Rect.new(100, 100, 100, 100)
+	-- StarterGui.ScreenGui.Frame.step3
+	G2L["3"] = Instance.new("Frame", Parent);
+	G2L["3"]["BorderSizePixel"] = 0;
+	G2L["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["3"]["BackgroundTransparency"] = 1;
+    G2L["3"]["Visible"]=false;
+	G2L["3"]["Size"] = UDim2.new(1, 0, 1, 0);
+	G2L["3"]["Name"] = [[step3]];
 
-        Sub_Frame.Name = "Sub_Frame"
-        Sub_Frame.Parent = Button
-        Sub_Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Sub_Frame.BackgroundTransparency = 1.000
-        Sub_Frame.Position = UDim2.new(0, 0, 1, 0)
-        Sub_Frame.Size = UDim2.new(1, 0, 0, 20)
+	-- StarterGui.ScreenGui.Frame.step3.Term
+	G2L["4"] = Instance.new("ImageLabel", G2L["3"]);
+	G2L["4"]["ZIndex"] = 3;
+	G2L["4"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
+	G2L["4"]["ScaleType"] = Enum.ScaleType.Slice;
+	G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["4"]["ImageColor3"] = Color3.fromRGB(231, 231, 231);
+	G2L["4"]["SliceScale"] = 0.07999999821186066;
+	G2L["4"]["AnchorPoint"] = Vector2.new(0.5, 1);
+	G2L["4"]["Size"] = UDim2.new(0, 25, 0, 25);
+	G2L["4"]["Name"] = [[Term]];
+	G2L["4"]["BackgroundTransparency"] = 1;
+	G2L["4"]["Position"] = UDim2.new(0.5, -130, 1, -150);
 
-        arrow_left.Name = "arrow_left"
-        arrow_left.Parent = Sub_Frame
-        arrow_left.AnchorPoint = Vector2.new(0, 0.5)
-        arrow_left.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        arrow_left.BackgroundTransparency = 1.000
-        arrow_left.Position = UDim2.new(0, 110, 0.5, 0)
-        arrow_left.Size = UDim2.new(0, 15, 0, 15)
-        arrow_left.Image = "rbxassetid://3926305904"
-        arrow_left.ImageColor3 = Color3.fromRGB(47, 47, 47)
-        arrow_left.ImageRectOffset = Vector2.new(364, 524)
-        arrow_left.ImageRectSize = Vector2.new(36, 36)
-        arrow_left.ImageTransparency = 0.250
+	-- StarterGui.ScreenGui.Frame.step3.Term.Sub_Frame
+	G2L["5"] = Instance.new("Frame", G2L["4"]);
+	G2L["5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["5"]["BackgroundTransparency"] = 1;
+	G2L["5"]["Size"] = UDim2.new(1, 0, 1, 0);
+	G2L["5"]["Position"] = UDim2.new(1, 0, 0, 0);
+	G2L["5"]["Name"] = [[Sub_Frame]];
 
-        Text.Name = "Text"
-        Text.Parent = Sub_Frame
-        Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Text.BackgroundTransparency = 1.000
-        Text.Size = UDim2.new(0.600000024, 0, 1, 0)
-        Text.ZIndex = 4
-        Text.Font = Font.new('rbxasset://fonts/families/Roboto.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
-        Text.Text = "Press Enter"
-        Text.TextColor3 = Color3.fromRGB(47, 47, 47)
-        Text.TextSize = 12.000
-        Text.TextTransparency = 0.250
-        Text.TextXAlignment = Enum.TextXAlignment.Right
+	-- StarterGui.ScreenGui.Frame.step3.Term.Sub_Frame.Text1
+	G2L["6"] = Instance.new("TextLabel", G2L["5"]);
+	G2L["6"]["BorderSizePixel"] = 0;
+	G2L["6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["6"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+	G2L["6"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["6"]["TextTransparency"] = 0.10000000149011612;
+	G2L["6"]["TextSize"] = 14;
+	G2L["6"]["TextColor3"] = Color3.fromRGB(46, 58, 74);
+	G2L["6"]["Size"] = UDim2.new(0, 253, 1, 0);
+	G2L["6"]["Text"] = [[I agree with the]];
+	G2L["6"]["Name"] = [[Text1]];
+	G2L["6"]["BackgroundTransparency"] = 1;
+	G2L["6"]["Position"] = UDim2.new(0, 7, 0, 0);
 
-        call.Name = "call"
-        call.Parent = Button
-        call.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        call.BackgroundTransparency = 1.000
-        call.Size = UDim2.new(1, 0, 1, 0)
-        call.ZIndex = 4
-        call.Font = Font.new('rbxasset://fonts/families/GothamSSm.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        call.Text = "Let's Start"
-        call.TextColor3 = Color3.fromRGB(255, 255, 255)
-        call.TextSize = 16.000
+	-- StarterGui.ScreenGui.Frame.step3.Term.Sub_Frame.Text2
+	G2L["7"] = Instance.new("TextLabel", G2L["5"]);
+	G2L["7"]["BorderSizePixel"] = 0;
+	G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["7"]["TextXAlignment"] = Enum.TextXAlignment.Right;
+	G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["7"]["TextTransparency"] = 0.10000000149011612;
+	G2L["7"]["TextSize"] = 14;
+	G2L["7"]["TextColor3"] = Color3.fromRGB(47, 136, 255);
+	G2L["7"]["Size"] = UDim2.new(0, 253, 1, 0);
+	G2L["7"]["Text"] = [[Terms and Conditions]];
+	G2L["7"]["Name"] = [[Text2]];
+	G2L["7"]["BackgroundTransparency"] = 1;
+	G2L["7"]["Position"] = UDim2.new(0, 7, 0, 0);
 
-        Sub_title.Name = "Sub_title"
-        Sub_title.Parent = step1
-        Sub_title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Sub_title.BackgroundTransparency = 1.000
-        Sub_title.Position = UDim2.new(0, 140, 0, 190)
-        Sub_title.Size = UDim2.new(0, 530, 0, 50)
-        Sub_title.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        Sub_title.Text = "Let's get to know you so you can start using the Scripts soon!"
-        Sub_title.TextColor3 = Color3.fromRGB(53, 53, 53)
-        Sub_title.TextSize = 21.000
-        Sub_title.TextTransparency = 0.420
-        Sub_title.TextWrapped = true
-        Sub_title.TextXAlignment = Enum.TextXAlignment.Left
-        Sub_title.TextYAlignment = Enum.TextYAlignment.Top
+	-- StarterGui.ScreenGui.Frame.step3.Term.Sub_Frame.Text2.call
+	G2L["8"] = Instance.new("TextButton", G2L["7"]);
+	G2L["8"]["ZIndex"] = 4;
+	G2L["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["8"]["TextSize"] = 16;
+	G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["8"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["8"]["AnchorPoint"] = Vector2.new(1, 0);
+	G2L["8"]["Size"] = UDim2.new(0, 148, 1, 0);
+	G2L["8"]["Name"] = [[call]];
+	G2L["8"]["Text"] = [[]];
+	G2L["8"]["Position"] = UDim2.new(1, 0, 0, 0);
+	G2L["8"]["BackgroundTransparency"] = 1;
 
-        Title.Name = "Title"
-        Title.Parent = step1
-        Title.AnchorPoint = Vector2.new(0.5, 0)
-        Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Title.BackgroundTransparency = 1.000
-        Title.Position = UDim2.new(0.5, 0, 0, 53)
-        Title.Size = UDim2.new(0, 680, 0, 130)
-        Title.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        Title.Text = "Hey! 👋\\nWelcome to HUBWD"
-        Title.TextColor3 = Color3.fromRGB(0, 0, 0)
-        Title.TextSize = 50.000
-        Title.TextTransparency = 0.200
-        Title.TextXAlignment = Enum.TextXAlignment.Left
-        Title.TextYAlignment = Enum.TextYAlignment.Bottom
+	-- StarterGui.ScreenGui.Frame.step3.Term.call
+	G2L["9"] = Instance.new("TextButton", G2L["4"]);
+	G2L["9"]["ZIndex"] = 4;
+	G2L["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["9"]["TextSize"] = 16;
+	G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["9"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["9"]["Size"] = UDim2.new(1, 0, 1, 0);
+	G2L["9"]["Name"] = [[call]];
+	G2L["9"]["Text"] = [[]];
+	G2L["9"]["BackgroundTransparency"] = 1;
 
-        return {
-            ['Title']=Title;
-            ['Sub_title']=Text;
-            ['Call']=call;
-            ['Text']=Text;
-        }
-    end;
-    ['Step2']=function(Parent)
-        local step2 = Instance.new("Frame",Parent)
-        local Options_Flags = Instance.new("Frame")
-        local UIListLayout = Instance.new("UIListLayout")
-        local spain = Instance.new("ImageLabel")
-        local call = Instance.new("TextButton")
-        local Title = Instance.new("TextLabel")
-        local flag = Instance.new("ImageLabel")
-        local _background = Instance.new("ImageLabel")
-        local german = Instance.new("ImageLabel")
-        local call_2 = Instance.new("TextButton")
-        local Title_2 = Instance.new("TextLabel")
-        local flag_2 = Instance.new("ImageLabel")
-        local _background_2 = Instance.new("ImageLabel")
-        local brazil = Instance.new("ImageLabel")
-        local call_3 = Instance.new("TextButton")
-        local Title_3 = Instance.new("TextLabel")
-        local flag_3 = Instance.new("ImageLabel")
-        local _background_3 = Instance.new("ImageLabel")
-        local unitedstates = Instance.new("ImageLabel")
-        local call_4 = Instance.new("TextButton")
-        local Title_4 = Instance.new("TextLabel")
-        local flag_4 = Instance.new("ImageLabel")
-        local _background_4 = Instance.new("ImageLabel")
-        local content = Instance.new("TextLabel")
-        local Sub_Title = Instance.new("TextLabel")
-        local Title_5 = Instance.new("TextLabel")
-        local Button = Instance.new("ImageLabel")
-        local Sub_Frame = Instance.new("Frame")
-        local arrow_left = Instance.new("ImageLabel")
-        local Text = Instance.new("TextLabel")
-        local call_5 = Instance.new("TextButton")
+    G2L["LOL"] = Instance.new("ImageLabel", G2L["9"]);
+    G2L["LOL"]["ZIndex"] = 5;
+    G2L["LOL"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
+    G2L["LOL"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+    G2L["LOL"]["ImageColor3"] = Color3.fromRGB(65, 145, 255);
+    G2L["LOL"]["SliceScale"] = 0.06;
+    G2L["LOL"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+    G2L["LOL"]["ImageRectSize"] = Vector2.new(24, 24);
+    G2L["LOL"]["Size"] = UDim2.new(1, -5, 1, -5);
+    G2L["LOL"]["Name"] = [[image_check]];
+    G2L["LOL"]["Visible"] = false;
+    G2L["LOL"]["ImageRectOffset"] = Vector2.new(312, 4);
+    G2L["LOL"]["BackgroundTransparency"] = 1;
+    G2L["LOL"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
-        step2.Name = "step2"
-        step2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        step2.BackgroundTransparency = 1.000
-        step2.BorderSizePixel = 0
-        step2.Size = UDim2.new(1, 0, 1, 0)
-        step2.Visible = false
+	-- StarterGui.ScreenGui.Frame.step3.Button
+	G2L["a"] = Instance.new("ImageLabel", G2L["3"]);
+	G2L["a"]["ZIndex"] = 3;
+	G2L["a"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
+	G2L["a"]["ScaleType"] = Enum.ScaleType.Slice;
+	G2L["a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["a"]["ImageColor3"] = Color3.fromRGB(181, 181, 181);
+	G2L["a"]["AnchorPoint"] = Vector2.new(0.5, 1);
+	G2L["a"]["Size"] = UDim2.new(0, 184, 0, 50);
+	G2L["a"]["Name"] = [[Button]];
+	G2L["a"]["BackgroundTransparency"] = 1;
+	G2L["a"]["Position"] = UDim2.new(0.5, 0, 1, -90);
 
-        Options_Flags.Name = "Options_Flags"
-        Options_Flags.Parent = step2
-        Options_Flags.AnchorPoint = Vector2.new(0.5, 0.5)
-        Options_Flags.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Options_Flags.BackgroundTransparency = 1.000
-        Options_Flags.BorderSizePixel = 0
-        Options_Flags.Position = UDim2.new(0.5, 0, 0.5, 0)
-        Options_Flags.Size = UDim2.new(1, 0, 0, 180)
+	-- StarterGui.ScreenGui.Frame.step3.Button.Sub_Frame
+	G2L["b"] = Instance.new("Frame", G2L["a"]);
+	G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["b"]["BackgroundTransparency"] = 1;
+	G2L["b"]["Size"] = UDim2.new(1, 0, 0, 20);
+	G2L["b"]["Position"] = UDim2.new(0, 0, 1, 0);
+	G2L["b"]["Name"] = [[Sub_Frame]];
 
-        UIListLayout.Parent = Options_Flags
-        UIListLayout.FillDirection = Enum.FillDirection.Horizontal
-        UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-        UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-        UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
-        UIListLayout.Padding = UDim.new(0, 15)
+	-- StarterGui.ScreenGui.Frame.step3.Button.Sub_Frame.arrow_left
+	G2L["c"] = Instance.new("ImageLabel", G2L["b"]);
+	G2L["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["c"]["ImageColor3"] = Color3.fromRGB(48, 48, 48);
+	G2L["c"]["ImageTransparency"] = 0.25;
+	G2L["c"]["AnchorPoint"] = Vector2.new(0, 0.5);
+	G2L["c"]["ImageRectSize"] = Vector2.new(36, 36);
+	G2L["c"]["Size"] = UDim2.new(0, 15, 0, 15);
+	G2L["c"]["Name"] = [[arrow_left]];
+	G2L["c"]["ImageRectOffset"] = Vector2.new(364, 524);
+	G2L["c"]["BackgroundTransparency"] = 1;
+	G2L["c"]["Position"] = UDim2.new(0, 110, 0.5, 0);
 
-        spain.Name = "spain"
-        spain.Parent = Options_Flags
-        spain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        spain.BackgroundTransparency = 1.000
-        spain.Size = UDim2.new(1, -20, 1, 0)
-        spain.SizeConstraint = Enum.SizeConstraint.RelativeYY
-        spain.Image = "rbxassetid://3570695787"
-        spain.ScaleType = Enum.ScaleType.Slice
-        spain.SliceCenter = Rect.new(100, 100, 100, 100)
-        spain.SliceScale = 0.120
+	-- StarterGui.ScreenGui.Frame.step3.Button.Sub_Frame.Text
+	G2L["d"] = Instance.new("TextLabel", G2L["b"]);
+	G2L["d"]["ZIndex"] = 4;
+	G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["d"]["TextXAlignment"] = Enum.TextXAlignment.Right;
+	G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["d"]["TextTransparency"] = 0.25;
+	G2L["d"]["TextSize"] = 12;
+	G2L["d"]["TextColor3"] = Color3.fromRGB(48, 48, 48);
+	G2L["d"]["Size"] = UDim2.new(0.6000000238418579, 0, 1, 0);
+	G2L["d"]["Text"] = [[Press Enter]];
+	G2L["d"]["Name"] = [[Text]];
+	G2L["d"]["BackgroundTransparency"] = 1;
 
-        call.Name = "call"
-        call.Parent = spain
-        call.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        call.BackgroundTransparency = 1.000
-        call.Size = UDim2.new(1, 0, 1, 0)
-        call.ZIndex = 8
-        call.AutoButtonColor = false
-        call.Font = Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
-        call.Text = ""
-        call.TextColor3 = Color3.fromRGB(0, 0, 0)
-        call.TextSize = 14.000
+	-- StarterGui.ScreenGui.Frame.step3.Button.call
+	G2L["e"] = Instance.new("TextButton", G2L["a"]);
+	G2L["e"]["ZIndex"] = 4;
+	G2L["e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["e"]["TextSize"] = 16;
+	G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["e"]["Size"] = UDim2.new(1, 0, 1, 0);
+	G2L["e"]["Name"] = [[call]];
+	G2L["e"]["Text"] = [[Continue]];
+	G2L["e"]["BackgroundTransparency"] = 1;
 
-        Title.Name = "Title"
-        Title.Parent = spain
-        Title.AnchorPoint = Vector2.new(0.5, 0.699999988)
-        Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Title.BackgroundTransparency = 1.000
-        Title.Position = UDim2.new(0.5, 0, 0.699999988, 0)
-        Title.Size = UDim2.new(1, 0, 0, 20)
-        Title.ZIndex = 3
-        Title.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        Title.Text = "Spanish"
-        Title.TextColor3 = Color3.fromRGB(43, 51, 63)
-        Title.TextSize = 18.000
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown
+	G2L["f"] = Instance.new("ImageLabel", G2L["3"]);
+	G2L["f"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
+	G2L["f"]["ScaleType"] = Enum.ScaleType.Slice;
+	G2L["f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["f"]["SliceScale"] = 0.11999999731779099;
+	G2L["f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+	G2L["f"]["Size"] = UDim2.new(0, 300, 0, 35);
+	G2L["f"]["Name"] = [[Dropdown]];
+	G2L["f"]["BackgroundTransparency"] = 1;
+	G2L["f"]["Position"] = UDim2.new(0.5, 40, 0.5, 0);
 
-        flag.Name = "flag"
-        flag.Parent = spain
-        flag.AnchorPoint = Vector2.new(0.5, 0.200000003)
-        flag.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        flag.BackgroundTransparency = 1.000
-        flag.Position = UDim2.new(0.5, 0, 0.200000003, 0)
-        flag.Size = UDim2.new(0, 75, 0, 75)
-        flag.ZIndex = 3
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown.Title
+	G2L["10"] = Instance.new("TextLabel", G2L["f"]);
+	G2L["10"]["BorderSizePixel"] = 0;
+	G2L["10"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["10"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+	G2L["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["10"]["TextTransparency"] = 0.10000000149011612;
+	G2L["10"]["TextSize"] = 14;
+	G2L["10"]["TextColor3"] = Color3.fromRGB(46, 58, 74);
+	G2L["10"]["AnchorPoint"] = Vector2.new(1, 0);
+	G2L["10"]["Size"] = UDim2.new(0, 130, 1, 0);
+	G2L["10"]["Text"] = [[Theme]];
+	G2L["10"]["Name"] = [[Title]];
+	G2L["10"]["BackgroundTransparency"] = 1;
 
-        _background.Name = "_background"
-        _background.Parent = spain
-        _background.AnchorPoint = Vector2.new(0.5, 0.5)
-        _background.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        _background.BackgroundTransparency = 1.000
-        _background.Position = UDim2.new(0.5, 0, 0.5, 0)
-        _background.Size = UDim2.new(1, -4, 1, -4)
-        _background.ZIndex = 2
-        _background.Image = "rbxassetid://3570695787"
-        _background.ScaleType = Enum.ScaleType.Slice
-        _background.SliceCenter = Rect.new(100, 100, 100, 100)
-        _background.SliceScale = 0.100
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown.Icon
+	G2L["11"] = Instance.new("ImageLabel", G2L["f"]);
+	G2L["11"]["ZIndex"] = 4;
+	G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["11"]["ImageColor3"] = Color3.fromRGB(144, 144, 144);
+	G2L["11"]["ImageTransparency"] = 0.20000000298023224;
+	G2L["11"]["AnchorPoint"] = Vector2.new(1, 0.5);
+	G2L["11"]["ImageRectSize"] = Vector2.new(36, 36);
+	G2L["11"]["Size"] = UDim2.new(0, 19, 0, 19);
+	G2L["11"]["Name"] = [[Icon]];
+	G2L["11"]["ImageRectOffset"] = Vector2.new(404, 284);
+	G2L["11"]["BackgroundTransparency"] = 1;
+	G2L["11"]["Position"] = UDim2.new(1, -8, 0.5, 0);
 
-        german.Name = "german"
-        german.Parent = Options_Flags
-        german.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        german.BackgroundTransparency = 1.000
-        german.Size = UDim2.new(1, -20, 1, 0)
-        german.SizeConstraint = Enum.SizeConstraint.RelativeYY
-        german.Image = "rbxassetid://3570695787"
-        german.ScaleType = Enum.ScaleType.Slice
-        german.SliceCenter = Rect.new(100, 100, 100, 100)
-        german.SliceScale = 0.120
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown.Theme
+	G2L["12"] = Instance.new("TextLabel", G2L["f"]);
+	G2L["12"]["ZIndex"] = 3;
+	G2L["12"]["BorderSizePixel"] = 0;
+	G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["12"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+	G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["12"]["TextTransparency"] = 0.1599999964237213;
+	G2L["12"]["TextSize"] = 14;
+	G2L["12"]["TextColor3"] = Color3.fromRGB(46, 58, 74);
+	G2L["12"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+	G2L["12"]["Size"] = UDim2.new(1, -50, 1, 0);
+	G2L["12"]["Text"] = [[Light]];
+	G2L["12"]["Name"] = [[Theme]];
+	G2L["12"]["BackgroundTransparency"] = 1;
+	G2L["12"]["Position"] = UDim2.new(0.5, -10, 0.5, 0);
 
-        call_2.Name = "call"
-        call_2.Parent = german
-        call_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        call_2.BackgroundTransparency = 1.000
-        call_2.Size = UDim2.new(1, 0, 1, 0)
-        call_2.ZIndex = 8
-        call_2.AutoButtonColor = false
-        call_2Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
-        call_2.Text = ""
-        call_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-        call_2.TextSize = 14.000
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown.call
+	G2L["13"] = Instance.new("TextButton", G2L["f"]);
+	G2L["13"]["ZIndex"] = 4;
+	G2L["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["13"]["TextSize"] = 16;
+	G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["13"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["13"]["Size"] = UDim2.new(1, 0, 1, 0);
+	G2L["13"]["Name"] = [[call]];
+	G2L["13"]["Text"] = [[]];
+	G2L["13"]["BackgroundTransparency"] = 1;
 
-        Title_2.Name = "Title"
-        Title_2.Parent = german
-        Title_2.AnchorPoint = Vector2.new(0.5, 0.699999988)
-        Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Title_2.BackgroundTransparency = 1.000
-        Title_2.Position = UDim2.new(0.5, 0, 0.699999988, 0)
-        Title_2.Size = UDim2.new(1, 0, 0, 20)
-        Title_2.ZIndex = 3
-        Title_2.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        Title_2.Text = "German"
-        Title_2.TextColor3 = Color3.fromRGB(43, 51, 63)
-        Title_2.TextSize = 18.000
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown.Background_Dropdown
+	G2L["14"] = Instance.new("ImageLabel", G2L["f"]);
+	G2L["14"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
+	G2L["14"]["ScaleType"] = Enum.ScaleType.Slice;
+	G2L["14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["14"]["SliceScale"] = 0.11999999731779099;
+	G2L["14"]["Visible"] = false;
+	G2L["14"]["Size"] = UDim2.new(1, 0, 0, 0);
+	G2L["14"]["ClipsDescendants"] = true;
+	G2L["14"]["Name"] = [[Background_Dropdown]];
+	G2L["14"]["BackgroundTransparency"] = 1;
+	G2L["14"]["Position"] = UDim2.new(0, 0, 0.5, 0);
 
-        flag_2.Name = "flag"
-        flag_2.Parent = german
-        flag_2.AnchorPoint = Vector2.new(0.5, 0.200000003)
-        flag_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        flag_2.BackgroundTransparency = 1.000
-        flag_2.Position = UDim2.new(0.5, 0, 0.200000003, 0)
-        flag_2.Size = UDim2.new(0, 75, 0, 75)
-        flag_2.ZIndex = 3
-        flag_2.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown.Background_Dropdown.Scrolling
+	G2L["15"] = Instance.new("ScrollingFrame", G2L["14"]);
+	G2L["15"]["Active"] = true;
+	G2L["15"]["ZIndex"] = 2;
+	G2L["15"]["BorderSizePixel"] = 0;
+	G2L["15"]["CanvasSize"] = UDim2.new(0, 0, 0, 231);
+	G2L["15"]["TopImage"] = [[rbxasset://textures/ui/Scroll/scroll-middle.png]];
+	G2L["15"]["ScrollBarImageTransparency"] = 0.42100000381469727;
+	G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["15"]["VerticalScrollBarInset"] = Enum.ScrollBarInset.ScrollBar;
+	G2L["15"]["BackgroundTransparency"] = 1;
+	G2L["15"]["LayoutOrder"] = 1;
+	G2L["15"]["Size"] = UDim2.new(1, 0, 0, 87);
+	G2L["15"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["15"]["ScrollBarThickness"] = 6;
+	G2L["15"]["Position"] = UDim2.new(0, 0, 0, 20);
+	G2L["15"]["Name"] = [[Scrolling]];
+	G2L["15"]["BottomImage"] = [[rbxasset://textures/ui/Scroll/scroll-middle.png]];
 
-        _background_2.Name = "_background"
-        _background_2.Parent = german
-        _background_2.AnchorPoint = Vector2.new(0.5, 0.5)
-        _background_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        _background_2.BackgroundTransparency = 1.000
-        _background_2.Position = UDim2.new(0.5, 0, 0.5, 0)
-        _background_2.Size = UDim2.new(1, -4, 1, -4)
-        _background_2.ZIndex = 2
-        _background_2.Image = "rbxassetid://3570695787"
-        _background_2.ScaleType = Enum.ScaleType.Slice
-        _background_2.SliceCenter = Rect.new(100, 100, 100, 100)
-        _background_2.SliceScale = 0.100
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown.Background_Dropdown.Scrolling.Background
+	G2L["16"] = Instance.new("Frame", G2L["15"]);
+	G2L["16"]["ZIndex"] = 2;
+	G2L["16"]["BorderSizePixel"] = 0;
+	G2L["16"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["16"]["Size"] = UDim2.new(1, 0, 1, 0);
+	G2L["16"]["Name"] = [[Background]];
 
-        brazil.Name = "brazil"
-        brazil.Parent = Options_Flags
-        brazil.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        brazil.BackgroundTransparency = 1.000
-        brazil.Size = UDim2.new(1, -20, 1, 0)
-        brazil.SizeConstraint = Enum.SizeConstraint.RelativeYY
-        brazil.Image = "rbxassetid://3570695787"
-        brazil.ScaleType = Enum.ScaleType.Slice
-        brazil.SliceCenter = Rect.new(100, 100, 100, 100)
-        brazil.SliceScale = 0.120
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown.Background_Dropdown.Scrolling.Background.UIListLayout
+	G2L["17"] = Instance.new("UIListLayout", G2L["16"]);
+	G2L["17"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
-        call_3.Name = "call"
-        call_3.Parent = brazil
-        call_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        call_3.BackgroundTransparency = 1.000
-        call_3.Size = UDim2.new(1, 0, 1, 0)
-        call_3.ZIndex = 8
-        call_3.AutoButtonColor = false
-        call_3Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
-        call_3.Text = ""
-        call_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-        call_3.TextSize = 14.000
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown.Background_Dropdown.Scrolling.Background.Light
+	G2L["18"] = Instance.new("TextButton", G2L["16"]);
+	G2L["18"]["ZIndex"] = 3;
+	G2L["18"]["AutoButtonColor"] = false;
+	G2L["18"]["BackgroundColor3"] = Color3.fromRGB(240, 248, 255);
+	G2L["18"]["TextSize"] = 14;
+	G2L["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["18"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["18"]["Size"] = UDim2.new(1, 0, 0, 33);
+	G2L["18"]["Name"] = [[Light]];
+	G2L["18"]["BorderColor3"] = Color3.fromRGB(196, 216, 230);
+	G2L["18"]["Text"] = [[]];
 
-        Title_3.Name = "Title"
-        Title_3.Parent = brazil
-        Title_3.AnchorPoint = Vector2.new(0.5, 0.699999988)
-        Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Title_3.BackgroundTransparency = 1.000
-        Title_3.Position = UDim2.new(0.5, 0, 0.699999988, 0)
-        Title_3.Size = UDim2.new(1, 0, 0, 20)
-        Title_3.ZIndex = 3
-        Title_3.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        Title_3.Text = "Portugueses"
-        Title_3.TextColor3 = Color3.fromRGB(43, 51, 63)
-        Title_3.TextSize = 18.000
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown.Background_Dropdown.Scrolling.Background.Light.Title
+	G2L["19"] = Instance.new("TextLabel", G2L["18"]);
+	G2L["19"]["ZIndex"] = 3;
+	G2L["19"]["BorderSizePixel"] = 0;
+	G2L["19"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["19"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+	G2L["19"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["19"]["TextTransparency"] = 0.4000000059604645;
+	G2L["19"]["TextSize"] = 14;
+	G2L["19"]["TextColor3"] = Color3.fromRGB(43, 122, 204);
+	G2L["19"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+	G2L["19"]["Size"] = UDim2.new(1, -50, 1, 0);
+	G2L["19"]["Text"] = [[Light]];
+	G2L["19"]["Name"] = [[Title]];
+	G2L["19"]["BackgroundTransparency"] = 1;
+	G2L["19"]["Position"] = UDim2.new(0.5, -10, 0.5, 0);
 
-        flag_3.Name = "flag"
-        flag_3.Parent = brazil
-        flag_3.AnchorPoint = Vector2.new(0.5, 0.200000003)
-        flag_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        flag_3.BackgroundTransparency = 1.000
-        flag_3.Position = UDim2.new(0.5, 0, 0.200000003, 0)
-        flag_3.Size = UDim2.new(0, 75, 0, 75)
-        flag_3.ZIndex = 3
-        flag_3.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown.Background_Dropdown.Scrolling.Background.Dark
+	G2L["1a"] = Instance.new("TextButton", G2L["16"]);
+	G2L["1a"]["ZIndex"] = 3;
+	G2L["1a"]["AutoButtonColor"] = false;
+	G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(240, 248, 255);
+	G2L["1a"]["TextSize"] = 14;
+	G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["1a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["1a"]["Size"] = UDim2.new(1, 0, 0, 33);
+	G2L["1a"]["Name"] = [[Dark]];
+	G2L["1a"]["BorderColor3"] = Color3.fromRGB(196, 216, 230);
+	G2L["1a"]["Text"] = [[]];
+	G2L["1a"]["BackgroundTransparency"] = 1;
 
-        _background_3.Name = "_background"
-        _background_3.Parent = brazil
-        _background_3.AnchorPoint = Vector2.new(0.5, 0.5)
-        _background_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        _background_3.BackgroundTransparency = 1.000
-        _background_3.Position = UDim2.new(0.5, 0, 0.5, 0)
-        _background_3.Size = UDim2.new(1, -4, 1, -4)
-        _background_3.ZIndex = 2
-        _background_3.Image = "rbxassetid://3570695787"
-        _background_3.ScaleType = Enum.ScaleType.Slice
-        _background_3.SliceCenter = Rect.new(100, 100, 100, 100)
-        _background_3.SliceScale = 0.100
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown.Background_Dropdown.Scrolling.Background.Dark.Title
+	G2L["1b"] = Instance.new("TextLabel", G2L["1a"]);
+	G2L["1b"]["ZIndex"] = 3;
+	G2L["1b"]["BorderSizePixel"] = 0;
+	G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["1b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+	G2L["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["1b"]["TextTransparency"] = 0.18000000715255737;
+	G2L["1b"]["TextSize"] = 14;
+	G2L["1b"]["TextColor3"] = Color3.fromRGB(0,0,0);
+	G2L["1b"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+	G2L["1b"]["Size"] = UDim2.new(1, -50, 1, 0);
+	G2L["1b"]["Text"] = [[Dark]];
+	G2L["1b"]["Name"] = [[Title]];
+	G2L["1b"]["BackgroundTransparency"] = 1;
+	G2L["1b"]["Position"] = UDim2.new(0.5, -10, 0.5, 0);
 
-        unitedstates.Name = "united-states"
-        unitedstates.Parent = Options_Flags
-        unitedstates.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        unitedstates.BackgroundTransparency = 1.000
-        unitedstates.Size = UDim2.new(1, -20, 1, 0)
-        unitedstates.SizeConstraint = Enum.SizeConstraint.RelativeYY
-        unitedstates.Image = "rbxassetid://3570695787"
-        unitedstates.ScaleType = Enum.ScaleType.Slice
-        unitedstates.SliceCenter = Rect.new(100, 100, 100, 100)
-        unitedstates.SliceScale = 0.120
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown.Background_Dropdown.Scrolling.Background.Cool
+	G2L["1c"] = Instance.new("TextButton", G2L["16"]);
+	G2L["1c"]["ZIndex"] = 3;
+	G2L["1c"]["AutoButtonColor"] = false;
+	G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(240, 248, 255);
+	G2L["1c"]["TextSize"] = 14;
+	G2L["1c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["1c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["1c"]["Size"] = UDim2.new(1, 0, 0, 33);
+	G2L["1c"]["Name"] = [[Cool]];
+	G2L["1c"]["BorderColor3"] = Color3.fromRGB(196, 216, 230);
+	G2L["1c"]["Text"] = [[]];
+	G2L["1c"]["BackgroundTransparency"] = 1;
 
-        call_4.Name = "call"
-        call_4.Parent = unitedstates
-        call_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        call_4.BackgroundTransparency = 1.000
-        call_4.Size = UDim2.new(1, 0, 1, 0)
-        call_4.ZIndex = 8
-        call_4.AutoButtonColor = false
-        call_4Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
-        call_4.Text = ""
-        call_4.TextColor3 = Color3.fromRGB(0, 0, 0)
-        call_4.TextSize = 14.000
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown.Background_Dropdown.Scrolling.Background.Cool.Title
+	G2L["1d"] = Instance.new("TextLabel", G2L["1c"]);
+	G2L["1d"]["ZIndex"] = 3;
+	G2L["1d"]["BorderSizePixel"] = 0;
+	G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["1d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+	G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["1d"]["TextTransparency"] = 0.18000000715255737;
+	G2L["1d"]["TextSize"] = 14;
+	G2L["1d"]["TextColor3"] = Color3.fromRGB(0,0,0);
+	G2L["1d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+	G2L["1d"]["Size"] = UDim2.new(1, -50, 1, 0);
+	G2L["1d"]["Text"] = [[Cool (Purple)]];
+	G2L["1d"]["Name"] = [[Title]];
+	G2L["1d"]["BackgroundTransparency"] = 1;
+	G2L["1d"]["Position"] = UDim2.new(0.5, -10, 0.5, 0);
 
-        Title_4.Name = "Title"
-        Title_4.Parent = unitedstates
-        Title_4.AnchorPoint = Vector2.new(0.5, 0.699999988)
-        Title_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Title_4.BackgroundTransparency = 1.000
-        Title_4.Position = UDim2.new(0.5, 0, 0.699999988, 0)
-        Title_4.Size = UDim2.new(1, 0, 0, 20)
-        Title_4.ZIndex = 3
-        Title_4.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        Title_4.Text = "English"
-        Title_4.TextColor3 = Color3.fromRGB(43, 51, 63)
-        Title_4.TextSize = 18.000
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown.Background_Dropdown.Scrolling.Background.HighContrast
+	G2L["1e"] = Instance.new("TextButton", G2L["16"]);
+	G2L["1e"]["ZIndex"] = 3;
+	G2L["1e"]["AutoButtonColor"] = false;
+	G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(240, 248, 255);
+	G2L["1e"]["TextSize"] = 14;
+	G2L["1e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["1e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["1e"]["Size"] = UDim2.new(1, 0, 0, 33);
+	G2L["1e"]["Name"] = [[HighContrast]];
+	G2L["1e"]["BorderColor3"] = Color3.fromRGB(196, 216, 230);
+	G2L["1e"]["Text"] = [[]];
+	G2L["1e"]["BackgroundTransparency"] = 1;
 
-        flag_4.Name = "flag"
-        flag_4.Parent = unitedstates
-        flag_4.AnchorPoint = Vector2.new(0.5, 0.200000003)
-        flag_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        flag_4.BackgroundTransparency = 1.000
-        flag_4.Position = UDim2.new(0.5, 0, 0.200000003, 0)
-        flag_4.Size = UDim2.new(0, 75, 0, 75)
-        flag_4.ZIndex = 3
-        flag_4.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown.Background_Dropdown.Scrolling.Background.HighContrast.Title
+	G2L["1f"] = Instance.new("TextLabel", G2L["1e"]);
+	G2L["1f"]["ZIndex"] = 3;
+	G2L["1f"]["BorderSizePixel"] = 0;
+	G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["1f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+	G2L["1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["1f"]["TextTransparency"] = 0.18000000715255737;
+	G2L["1f"]["TextSize"] = 14;
+	G2L["1f"]["TextColor3"] = Color3.fromRGB(0,0,0);
+	G2L["1f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+	G2L["1f"]["Size"] = UDim2.new(1, -50, 1, 0);
+	G2L["1f"]["Text"] = [[High Contrast]];
+	G2L["1f"]["Name"] = [[Title]];
+	G2L["1f"]["BackgroundTransparency"] = 1;
+	G2L["1f"]["Position"] = UDim2.new(0.5, -10, 0.5, 0);
 
-        _background_4.Name = "_background"
-        _background_4.Parent = unitedstates
-        _background_4.AnchorPoint = Vector2.new(0.5, 0.5)
-        _background_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        _background_4.BackgroundTransparency = 1.000
-        _background_4.Position = UDim2.new(0.5, 0, 0.5, 0)
-        _background_4.Size = UDim2.new(1, -4, 1, -4)
-        _background_4.ZIndex = 2
-        _background_4.Image = "rbxassetid://3570695787"
-        _background_4.ScaleType = Enum.ScaleType.Slice
-        _background_4.SliceCenter = Rect.new(100, 100, 100, 100)
-        _background_4.SliceScale = 0.100
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown.Background_Dropdown.Scrolling.Background.Warm
+	G2L["20"] = Instance.new("TextButton", G2L["16"]);
+	G2L["20"]["ZIndex"] = 3;
+	G2L["20"]["AutoButtonColor"] = false;
+	G2L["20"]["BackgroundColor3"] = Color3.fromRGB(240, 248, 255);
+	G2L["20"]["TextSize"] = 14;
+	G2L["20"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["20"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["20"]["Size"] = UDim2.new(1, 0, 0, 33);
+	G2L["20"]["Name"] = [[Warm]];
+	G2L["20"]["BorderColor3"] = Color3.fromRGB(196, 216, 230);
+	G2L["20"]["Text"] = [[]];
+	G2L["20"]["BackgroundTransparency"] = 1;
 
-        content.Name = "content"
-        content.Parent = step2
-        content.AnchorPoint = Vector2.new(0.5, 0)
-        content.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        content.BackgroundTransparency = 1.000
-        content.Position = UDim2.new(0.5, 0, 0, 110)
-        content.Size = UDim2.new(0, 500, 0, 40)
-        content.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
-        content.Text = "Pick our suggestion or change it "
-        content.TextColor3 = Color3.fromRGB(45, 57, 73)
-        content.TextSize = 16.000
-        content.TextTransparency = 0.380
-        content.TextWrapped = true
-        content.TextYAlignment = Enum.TextYAlignment.Top
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown.Background_Dropdown.Scrolling.Background.Warm.Title
+	G2L["21"] = Instance.new("TextLabel", G2L["20"]);
+	G2L["21"]["ZIndex"] = 3;
+	G2L["21"]["BorderSizePixel"] = 0;
+	G2L["21"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["21"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+	G2L["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["21"]["TextTransparency"] = 0.18000000715255737;
+	G2L["21"]["TextSize"] = 14;
+	G2L["21"]["TextColor3"] = Color3.fromRGB(0,0,0);
+	G2L["21"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+	G2L["21"]["Size"] = UDim2.new(1, -50, 1, 0);
+	G2L["21"]["Text"] = [[Warm]];
+	G2L["21"]["Name"] = [[Title]];
+	G2L["21"]["BackgroundTransparency"] = 1;
+	G2L["21"]["Position"] = UDim2.new(0.5, -10, 0.5, 0);
 
-        Sub_Title.Name = "Sub_Title"
-        Sub_Title.Parent = step2
-        Sub_Title.AnchorPoint = Vector2.new(0.5, 0)
-        Sub_Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Sub_Title.BackgroundTransparency = 1.000
-        Sub_Title.Position = UDim2.new(0.5, 0, 0, 65)
-        Sub_Title.Size = UDim2.new(0, 500, 0, 40)
-        Sub_Title.Font = Font.new('rbxasset://fonts/families/Roboto.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
-        Sub_Title.Text = "Confirm your text language"
-        Sub_Title.TextColor3 = Color3.fromRGB(45, 57, 73)
-        Sub_Title.TextSize = 34.000
-        Sub_Title.TextWrapped = true
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown.Background_Dropdown.Scrolling.Background.Pastel
+	G2L["22"] = Instance.new("TextButton", G2L["16"]);
+	G2L["22"]["ZIndex"] = 3;
+	G2L["22"]["AutoButtonColor"] = false;
+	G2L["22"]["BackgroundColor3"] = Color3.fromRGB(240, 248, 255);
+	G2L["22"]["TextSize"] = 14;
+	G2L["22"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["22"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["22"]["Size"] = UDim2.new(1, 0, 0, 33);
+	G2L["22"]["Name"] = [[Pastel]];
+	G2L["22"]["BorderColor3"] = Color3.fromRGB(196, 216, 230);
+	G2L["22"]["Text"] = [[]];
+	G2L["22"]["BackgroundTransparency"] = 1;
 
-        Title_5.Name = "Title"
-        Title_5.Parent = step2
-        Title_5.AnchorPoint = Vector2.new(0.5, 0)
-        Title_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Title_5.BackgroundTransparency = 1.000
-        Title_5.Position = UDim2.new(0.5, 0, 0, 50)
-        Title_5.Size = UDim2.new(0, 200, 0, 15)
-        Title_5.Font = Font.new('rbxasset://fonts/families/Roboto.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        Title_5.Text = "SETUP"
-        Title_5.TextColor3 = Color3.fromRGB(63, 124, 197)
-        Title_5.TextSize = 14.000
-        Title_5.TextWrapped = true
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown.Background_Dropdown.Scrolling.Background.Pastel.Title
+	G2L["23"] = Instance.new("TextLabel", G2L["22"]);
+	G2L["23"]["ZIndex"] = 3;
+	G2L["23"]["BorderSizePixel"] = 0;
+	G2L["23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["23"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+	G2L["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["23"]["TextTransparency"] = 0.18000000715255737;
+	G2L["23"]["TextSize"] = 14;
+	G2L["23"]["TextColor3"] = Color3.fromRGB(0,0,0);
+	G2L["23"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+	G2L["23"]["Size"] = UDim2.new(1, -50, 1, 0);
+	G2L["23"]["Text"] = [[Pastel]];
+	G2L["23"]["Name"] = [[Title]];
+	G2L["23"]["BackgroundTransparency"] = 1;
+	G2L["23"]["Position"] = UDim2.new(0.5, -10, 0.5, 0);
 
-        Button.Name = "Button"
-        Button.Parent = step2
-        Button.AnchorPoint = Vector2.new(0.5, 1)
-        Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Button.BackgroundTransparency = 1.000
-        Button.Position = UDim2.new(0.5, 0, 1, -90)
-        Button.Size = UDim2.new(0, 184, 0, 50)
-        Button.Visible = false
-        Button.ZIndex = 3
-        Button.Image = "rbxassetid://3570695787"
-        Button.ImageColor3 = Color3.fromRGB(46, 135, 255)
-        Button.ScaleType = Enum.ScaleType.Slice
-        Button.SliceCenter = Rect.new(100, 100, 100, 100)
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown.Background_Dropdown.Scrolling.Background.Monochromatic
+	G2L["24"] = Instance.new("TextButton", G2L["16"]);
+	G2L["24"]["ZIndex"] = 3;
+	G2L["24"]["AutoButtonColor"] = false;
+	G2L["24"]["BackgroundColor3"] = Color3.fromRGB(240, 248, 255);
+	G2L["24"]["TextSize"] = 14;
+	G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["24"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["24"]["Size"] = UDim2.new(1, 0, 0, 33);
+	G2L["24"]["Name"] = [[Monochromatic]];
+	G2L["24"]["BorderColor3"] = Color3.fromRGB(196, 216, 230);
+	G2L["24"]["Text"] = [[]];
+	G2L["24"]["BackgroundTransparency"] = 1;
 
-        Sub_Frame.Name = "Sub_Frame"
-        Sub_Frame.Parent = Button
-        Sub_Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Sub_Frame.BackgroundTransparency = 1.000
-        Sub_Frame.Position = UDim2.new(0, 0, 1, 0)
-        Sub_Frame.Size = UDim2.new(1, 0, 0, 20)
+	-- StarterGui.ScreenGui.Frame.step3.Dropdown.Background_Dropdown.Scrolling.Background.Monochromatic.Title
+	G2L["25"] = Instance.new("TextLabel", G2L["24"]);
+	G2L["25"]["ZIndex"] = 3;
+	G2L["25"]["BorderSizePixel"] = 0;
+	G2L["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["25"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+	G2L["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["25"]["TextTransparency"] = 0.18000000715255737;
+	G2L["25"]["TextSize"] = 14;
+	G2L["25"]["TextColor3"] = Color3.fromRGB(0,0,0);
+	G2L["25"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+	G2L["25"]["Size"] = UDim2.new(1, -50, 1, 0);
+	G2L["25"]["Text"] = [[Monochromatic]];
+	G2L["25"]["Name"] = [[Title]];
+	G2L["25"]["BackgroundTransparency"] = 1;
+	G2L["25"]["Position"] = UDim2.new(0.5, -10, 0.5, 0);
 
-        arrow_left.Name = "arrow_left"
-        arrow_left.Parent = Sub_Frame
-        arrow_left.AnchorPoint = Vector2.new(0, 0.5)
-        arrow_left.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        arrow_left.BackgroundTransparency = 1.000
-        arrow_left.Position = UDim2.new(0, 110, 0.5, 0)
-        arrow_left.Size = UDim2.new(0, 15, 0, 15)
-        arrow_left.Image = "rbxassetid://3926305904"
-        arrow_left.ImageColor3 = Color3.fromRGB(47, 47, 47)
-        arrow_left.ImageRectOffset = Vector2.new(364, 524)
-        arrow_left.ImageRectSize = Vector2.new(36, 36)
-        arrow_left.ImageTransparency = 0.250
+	-- StarterGui.ScreenGui.Frame.step3.Location
+	G2L["26"] = Instance.new("ImageLabel", G2L["3"]);
+	G2L["26"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
+	G2L["26"]["ScaleType"] = Enum.ScaleType.Slice;
+	G2L["26"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["26"]["SliceScale"] = 0.11999999731779099;
+	G2L["26"]["AnchorPoint"] = Vector2.new(0.5, 0.4000000059604645);
+	G2L["26"]["Size"] = UDim2.new(0, 300, 0, 35);
+	G2L["26"]["Name"] = [[Location]];
+	G2L["26"]["BackgroundTransparency"] = 1;
+	G2L["26"]["Position"] = UDim2.new(0.5, 40, 0.4000000059604645, 0);
 
-        Text.Name = "Text"
-        Text.Parent = Sub_Frame
-        Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Text.BackgroundTransparency = 1.000
-        Text.Size = UDim2.new(0.600000024, 0, 1, 0)
-        Text.ZIndex = 4
-        Text.Font = Font.new('rbxasset://fonts/families/Roboto.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
-        Text.Text = "Press Enter"
-        Text.TextColor3 = Color3.fromRGB(47, 47, 47)
-        Text.TextSize = 12.000
-        Text.TextTransparency = 0.250
-        Text.TextXAlignment = Enum.TextXAlignment.Right
+	-- StarterGui.ScreenGui.Frame.step3.Location.Title
+	G2L["27"] = Instance.new("TextLabel", G2L["26"]);
+	G2L["27"]["BorderSizePixel"] = 0;
+	G2L["27"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["27"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+	G2L["27"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["27"]["TextTransparency"] = 0.10000000149011612;
+	G2L["27"]["TextSize"] = 14;
+	G2L["27"]["TextColor3"] = Color3.fromRGB(46, 58, 74);
+	G2L["27"]["AnchorPoint"] = Vector2.new(1, 0);
+	G2L["27"]["Size"] = UDim2.new(0, 130, 1, 0);
+	G2L["27"]["Text"] = [[Directory folder]];
+	G2L["27"]["Name"] = [[Title]];
+	G2L["27"]["BackgroundTransparency"] = 1;
 
-        call_5.Name = "call"
-        call_5.Parent = Button
-        call_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        call_5.BackgroundTransparency = 1.000
-        call_5.Size = UDim2.new(1, 0, 1, 0)
-        call_5.ZIndex = 4
-        call_5.Font = Font.new('rbxasset://fonts/families/GothamSSm.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        call_5.Text = "Continue"
-        call_5.TextColor3 = Color3.fromRGB(255, 255, 255)
-        call_5.TextSize = 16.000;
+	-- StarterGui.ScreenGui.Frame.step3.Location.TextBox_:)
+	G2L["28"] = Instance.new("TextBox", G2L["26"]);
+	G2L["28"]["Active"] = false;
+	G2L["28"]["ZIndex"] = 3;
+	G2L["28"]["TextEditable"] = false;
+	G2L["28"]["TextSize"] = 14;
+	G2L["28"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+	G2L["28"]["TextTransparency"] = 0.1599999964237213;
+	G2L["28"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["28"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["28"]["TextColor3"] = Color3.fromRGB(46, 58, 74);
+	G2L["28"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["28"]["ShowNativeInput"] = false;
+	G2L["28"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+	G2L["28"]["BackgroundTransparency"] = 1;
+	G2L["28"]["Size"] = UDim2.new(1, -50, 1, 0);
+	G2L["28"]["Text"] = [[..\workspace\HUBWD]];
+	G2L["28"]["Position"] = UDim2.new(0.5, -10, 0.5, 0);
+	G2L["28"]["Name"] = [[TextBox_:)]];
+	G2L["28"]["ClearTextOnFocus"] = false;
 
-        return {
-            ['content']=content;
-            ['Sub_Title']=Sub_Title;
-            ['Spain']=Title_1;
-            ['German']=Title_2;
-            ['Brazil']=Title_3;
-            ['English']=Title_4;
-            ['Flag_spain']=flag;
-            ['Flag_german']=flag_2;
-            ['Flag_brazil']=flag_3;
-            ['Flag_unitedstates']=flag_4;
-            ['Call']=call_5;
-            ['Press']=Text;
-        }
-    end;
-    ['Step3']=function(Parent)
-        local step3 = Instance.new("Frame",Parent)
-        local Term = Instance.new("ImageLabel")
-        local Sub_Frame = Instance.new("Frame")
-        local Text1 = Instance.new("TextLabel")
-        local Text2 = Instance.new("TextLabel")
-        local call = Instance.new("TextButton")
-        local call_2 = Instance.new("TextButton")
-        local Button = Instance.new("ImageLabel")
-        local Sub_Frame_2 = Instance.new("Frame")
-        local arrow_left = Instance.new("ImageLabel")
-        local Text = Instance.new("TextLabel")
-        local call_3 = Instance.new("TextButton")
-        local Dropdown = Instance.new("ImageLabel")
-        local Title = Instance.new("TextLabel")
-        local Icon = Instance.new("ImageLabel")
-        local Theme = Instance.new("TextLabel")
-        local call_4 = Instance.new("TextButton")
-        local Background_Dropdown = Instance.new("ImageLabel")
-        local Scrolling = Instance.new("ScrollingFrame")
-        local Background = Instance.new("Frame")
-        local UIListLayout = Instance.new("UIListLayout")
-        local Light = Instance.new("TextButton")
-        local Title_2 = Instance.new("TextLabel")
-        local Dark = Instance.new("TextButton")
-        local Title_3 = Instance.new("TextLabel")
-        local Cool = Instance.new("TextButton")
-        local Title_4 = Instance.new("TextLabel")
-        local HighContrast = Instance.new("TextButton")
-        local Title_5 = Instance.new("TextLabel")
-        local Warm = Instance.new("TextButton")
-        local Title_6 = Instance.new("TextLabel")
-        local Pastel = Instance.new("TextButton")
-        local Title_7 = Instance.new("TextLabel")
-        local Monochromatic = Instance.new("TextButton")
-        local Title_8 = Instance.new("TextLabel")
-        local Location = Instance.new("ImageLabel")
-        local Title_9 = Instance.new("TextLabel")
-        local TextBox_ = Instance.new("TextBox")
-        local Icon_2 = Instance.new("ImageLabel")
-        local content = Instance.new("TextLabel")
-        local Title_10 = Instance.new("TextLabel")
-        local Sub_Title = Instance.new("TextLabel")
-        
-        step3.Name = "step3"
-        step3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        step3.BackgroundTransparency = 1.000
-        step3.BorderSizePixel = 0
-        step3.Size = UDim2.new(1, 0, 1, 0)
-        step3.Visible = false
-        
-        Term.Name = "Term"
-        Term.Parent = step3
-        Term.AnchorPoint = Vector2.new(0.5, 1)
-        Term.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Term.BackgroundTransparency = 1.000
-        Term.Position = UDim2.new(0.5, -130, 1, -150)
-        Term.Size = UDim2.new(0, 25, 0, 25)
-        Term.ZIndex = 3
-        Term.Image = "rbxassetid://3570695787"
-        Term.ImageColor3 = Color3.fromRGB(230, 230, 230)
-        Term.ScaleType = Enum.ScaleType.Slice
-        Term.SliceCenter = Rect.new(100, 100, 100, 100)
-        Term.SliceScale = 0.080
-        
-        Sub_Frame.Name = "Sub_Frame"
-        Sub_Frame.Parent = Term
-        Sub_Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Sub_Frame.BackgroundTransparency = 1.000
-        Sub_Frame.Position = UDim2.new(1, 0, 0, 0)
-        Sub_Frame.Size = UDim2.new(1, 0, 1, 0)
-        
-        Text1.Name = "Text1"
-        Text1.Parent = Sub_Frame
-        Text1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Text1.BackgroundTransparency = 1.000
-        Text1.BorderSizePixel = 0
-        Text1.Position = UDim2.new(0, 7, 0, 0)
-        Text1.Size = UDim2.new(0, 253, 1, 0)
-        Text1Font.new('rbxasset://fonts/families/GothamSSm.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        Text1.Text = "I agree with the"
-        Text1.TextColor3 = Color3.fromRGB(45, 57, 73)
-        Text1.TextSize = 14.000
-        Text1.TextTransparency = 0.100
-        Text1.TextXAlignment = Enum.TextXAlignment.Left
-        
-        Text2.Name = "Text2"
-        Text2.Parent = Sub_Frame
-        Text2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Text2.BackgroundTransparency = 1.000
-        Text2.BorderSizePixel = 0
-        Text2.Position = UDim2.new(0, 7, 0, 0)
-        Text2.Size = UDim2.new(0, 253, 1, 0)
-        Text2Font.new('rbxasset://fonts/families/GothamSSm.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        Text2.Text = "Terms and Conditions"
-        Text2.TextColor3 = Color3.fromRGB(46, 135, 255)
-        Text2.TextSize = 14.000
-        Text2.TextTransparency = 0.100
-        Text2.TextXAlignment = Enum.TextXAlignment.Right
-        
-        call.Name = "call"
-        call.Parent = Text2
-        call.AnchorPoint = Vector2.new(1, 0)
-        call.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        call.BackgroundTransparency = 1.000
-        call.Position = UDim2.new(1, 0, 0, 0)
-        call.Size = UDim2.new(0, 148, 1, 0)
-        call.ZIndex = 4
-        callFont.new('rbxasset://fonts/families/GothamSSm.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        call.Text = ""
-        call.TextColor3 = Color3.fromRGB(255, 255, 255)
-        call.TextSize = 16.000
-        
-        call_2.Name = "call"
-        call_2.Parent = Term
-        call_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        call_2.BackgroundTransparency = 1.000
-        call_2.Size = UDim2.new(1, 0, 1, 0)
-        call_2.ZIndex = 4
-        call_2Font.new('rbxasset://fonts/families/GothamSSm.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        call_2.Text = ""
-        call_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-        call_2.TextSize = 16.000
-        
-        Button.Name = "Button"
-        Button.Parent = step3
-        Button.AnchorPoint = Vector2.new(0.5, 1)
-        Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Button.BackgroundTransparency = 1.000
-        Button.Position = UDim2.new(0.5, 0, 1, -90)
-        Button.Size = UDim2.new(0, 184, 0, 50)
-        Button.ZIndex = 3
-        Button.Image = "rbxassetid://3570695787"
-        Button.ImageColor3 = Color3.fromRGB(46, 135, 255)
-        Button.ScaleType = Enum.ScaleType.Slice
-        Button.SliceCenter = Rect.new(100, 100, 100, 100)
-        
-        Sub_Frame_2.Name = "Sub_Frame"
-        Sub_Frame_2.Parent = Button
-        Sub_Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Sub_Frame_2.BackgroundTransparency = 1.000
-        Sub_Frame_2.Position = UDim2.new(0, 0, 1, 0)
-        Sub_Frame_2.Size = UDim2.new(1, 0, 0, 20)
-        
-        arrow_left.Name = "arrow_left"
-        arrow_left.Parent = Sub_Frame_2
-        arrow_left.AnchorPoint = Vector2.new(0, 0.5)
-        arrow_left.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        arrow_left.BackgroundTransparency = 1.000
-        arrow_left.Position = UDim2.new(0, 110, 0.5, 0)
-        arrow_left.Size = UDim2.new(0, 15, 0, 15)
-        arrow_left.Image = "rbxassetid://3926305904"
-        arrow_left.ImageColor3 = Color3.fromRGB(47, 47, 47)
-        arrow_left.ImageRectOffset = Vector2.new(364, 524)
-        arrow_left.ImageRectSize = Vector2.new(36, 36)
-        arrow_left.ImageTransparency = 0.250
-        
-        Text.Name = "Text"
-        Text.Parent = Sub_Frame_2
-        Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Text.BackgroundTransparency = 1.000
-        Text.Size = UDim2.new(0.600000024, 0, 1, 0)
-        Text.ZIndex = 4
-        Text.Font = Font.new('rbxasset://fonts/families/Roboto.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
-        Text.Text = "Press Enter"
-        Text.TextColor3 = Color3.fromRGB(47, 47, 47)
-        Text.TextSize = 12.000
-        Text.TextTransparency = 0.250
-        Text.TextXAlignment = Enum.TextXAlignment.Right
-        
-        call_3.Name = "call"
-        call_3.Parent = Button
-        call_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        call_3.BackgroundTransparency = 1.000
-        call_3.Size = UDim2.new(1, 0, 1, 0)
-        call_3.ZIndex = 4
-        call_3Font.new('rbxasset://fonts/families/GothamSSm.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        call_3.Text = "Continue"
-        call_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-        call_3.TextSize = 16.000
-        
-        Dropdown.Name = "Dropdown"
-        Dropdown.Parent = step3
-        Dropdown.AnchorPoint = Vector2.new(0.5, 0.5)
-        Dropdown.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Dropdown.BackgroundTransparency = 1.000
-        Dropdown.Position = UDim2.new(0.5, 40, 0.5, 0)
-        Dropdown.Size = UDim2.new(0, 300, 0, 35)
-        Dropdown.Image = "rbxassetid://3570695787"
-        Dropdown.ScaleType = Enum.ScaleType.Slice
-        Dropdown.SliceCenter = Rect.new(100, 100, 100, 100)
-        Dropdown.SliceScale = 0.120
-        
-        Title.Name = "Title"
-        Title.Parent = Dropdown
-        Title.AnchorPoint = Vector2.new(1, 0)
-        Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Title.BackgroundTransparency = 1.000
-        Title.BorderSizePixel = 0
-        Title.Size = UDim2.new(0, 130, 1, 0)
-        TitleFont.new('rbxasset://fonts/families/GothamSSm.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        Title.Text = "Theme"
-        Title.TextColor3 = Color3.fromRGB(45, 57, 73)
-        Title.TextSize = 14.000
-        Title.TextTransparency = 0.100
-        Title.TextXAlignment = Enum.TextXAlignment.Left
-        
-        Icon.Name = "Icon"
-        Icon.Parent = Dropdown
-        Icon.AnchorPoint = Vector2.new(1, 0.5)
-        Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Icon.BackgroundTransparency = 1.000
-        Icon.Position = UDim2.new(1, -8, 0.5, 0)
-        Icon.Size = UDim2.new(0, 19, 0, 19)
-        Icon.ZIndex = 4
-        Icon.Image = "rbxassetid://3926305904"
-        Icon.ImageColor3 = Color3.fromRGB(143, 143, 143)
-        Icon.ImageRectOffset = Vector2.new(404, 284)
-        Icon.ImageRectSize = Vector2.new(36, 36)
-        Icon.ImageTransparency = 0.200
-        
-        Theme.Name = "Theme"
-        Theme.Parent = Dropdown
-        Theme.AnchorPoint = Vector2.new(0.5, 0.5)
-        Theme.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Theme.BackgroundTransparency = 1.000
-        Theme.BorderSizePixel = 0
-        Theme.Position = UDim2.new(0.5, -10, 0.5, 0)
-        Theme.Size = UDim2.new(1, -50, 1, 0)
-        Theme.ZIndex = 3
-        Theme.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        Theme.Text = "Light"
-        Theme.TextColor3 = Color3.fromRGB(45, 57, 73)
-        Theme.TextSize = 14.000
-        Theme.TextTransparency = 0.160
-        Theme.TextXAlignment = Enum.TextXAlignment.Left
-        
-        call_4.Name = "call"
-        call_4.Parent = Dropdown
-        call_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        call_4.BackgroundTransparency = 1.000
-        call_4.Size = UDim2.new(1, 0, 1, 0)
-        call_4.ZIndex = 4
-        call_4Font.new('rbxasset://fonts/families/GothamSSm.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        call_4.Text = "Continue"
-        call_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-        call_4.TextSize = 16.000
-        
-        Background_Dropdown.Name = "Background_Dropdown"
-        Background_Dropdown.Parent = Dropdown
-        Background_Dropdown.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Background_Dropdown.BackgroundTransparency = 1.000
-        Background_Dropdown.ClipsDescendants = true
-        Background_Dropdown.Position = UDim2.new(0, 0, 0.5, 0)
-        Background_Dropdown.Size = UDim2.new(1, 0, 0, 0)
-        Background_Dropdown.Visible = false
-        Background_Dropdown.Image = "rbxassetid://3570695787"
-        Background_Dropdown.ScaleType = Enum.ScaleType.Slice
-        Background_Dropdown.SliceCenter = Rect.new(100, 100, 100, 100)
-        Background_Dropdown.SliceScale = 0.120
-        
-        Scrolling.Name = "Scrolling"
-        Scrolling.Parent = Background_Dropdown
-        Scrolling.Active = true
-        Scrolling.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Scrolling.BackgroundTransparency = 1.000
-        Scrolling.BorderSizePixel = 0
-        Scrolling.LayoutOrder = 1
-        Scrolling.Position = UDim2.new(0, 0, 0, 20)
-        Scrolling.Size = UDim2.new(1, 0, 0, 87)
-        Scrolling.ZIndex = 2
-        Scrolling.BottomImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
-        Scrolling.CanvasSize = UDim2.new(0, 0, 0, 231)
-        Scrolling.ScrollBarThickness = 6
-        Scrolling.TopImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
-        Scrolling.VerticalScrollBarInset = Enum.ScrollBarInset.ScrollBar
-        
-        Background.Name = "Background"
-        Background.Parent = Scrolling
-        Background.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Background.BorderSizePixel = 0
-        Background.Size = UDim2.new(1, 0, 1, 0)
-        Background.ZIndex = 2
-        
-        UIListLayout.Parent = Background
-        UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-        
-        Light.Name = "Light"
-        Light.Parent = Background
-        Light.BackgroundColor3 = Color3.fromRGB(239, 247, 255)
-        Light.BorderColor3 = Color3.fromRGB(195, 215, 229)
-        Light.Size = UDim2.new(1, 0, 0, 33)
-        Light.ZIndex = 3
-        Light.AutoButtonColor = false
-        Light.Font = Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        Light.Text = ""
-        Light.TextColor3 = Color3.fromRGB(0, 0, 0)
-        Light.TextSize = 14.000
-        
-        Title_2.Name = "Title"
-        Title_2.Parent = Light
-        Title_2.AnchorPoint = Vector2.new(0.5, 0.5)
-        Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Title_2.BackgroundTransparency = 1.000
-        Title_2.BorderSizePixel = 0
-        Title_2.Position = UDim2.new(0.5, -10, 0.5, 0)
-        Title_2.Size = UDim2.new(1, -50, 1, 0)
-        Title_2.ZIndex = 3
-        Title_2.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        Title_2.Text = "Light"
-        Title_2.TextColor3 = Color3.fromRGB(43, 122, 204)
-        Title_2.TextSize = 14.000
-        Title_2.TextTransparency = 0.400
-        Title_2.TextXAlignment = Enum.TextXAlignment.Left
-        
-        Dark.Name = "Dark"
-        Dark.Parent = Background
-        Dark.BackgroundColor3 = Color3.fromRGB(239, 247, 255)
-        Dark.BackgroundTransparency = 1.000
-        Dark.BorderColor3 = Color3.fromRGB(195, 215, 229)
-        Dark.Size = UDim2.new(1, 0, 0, 33)
-        Dark.ZIndex = 3
-        Dark.AutoButtonColor = false
-        Dark.Font = Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        Dark.Text = ""
-        Dark.TextColor3 = Color3.fromRGB(0, 0, 0)
-        Dark.TextSize = 14.000
-        
-        Title_3.Name = "Title"
-        Title_3.Parent = Dark
-        Title_3.AnchorPoint = Vector2.new(0.5, 0.5)
-        Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Title_3.BackgroundTransparency = 1.000
-        Title_3.BorderSizePixel = 0
-        Title_3.Position = UDim2.new(0.5, -10, 0.5, 0)
-        Title_3.Size = UDim2.new(1, -50, 1, 0)
-        Title_3.ZIndex = 3
-        Title_3.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        Title_3.Text = "Dark"
-        Title_3.TextColor3 = Color3.fromRGB(45, 57, 73)
-        Title_3.TextSize = 14.000
-        Title_3.TextTransparency = 0.180
-        Title_3.TextXAlignment = Enum.TextXAlignment.Left
-        
-        Cool.Name = "Cool"
-        Cool.Parent = Background
-        Cool.BackgroundColor3 = Color3.fromRGB(239, 247, 255)
-        Cool.BackgroundTransparency = 1.000
-        Cool.BorderColor3 = Color3.fromRGB(195, 215, 229)
-        Cool.Size = UDim2.new(1, 0, 0, 33)
-        Cool.ZIndex = 3
-        Cool.AutoButtonColor = false
-        Cool.Font = Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
-        Cool.Text = ""
-        Cool.TextColor3 = Color3.fromRGB(0, 0, 0)
-        Cool.TextSize = 14.000
-        
-        Title_4.Name = "Title"
-        Title_4.Parent = Cool
-        Title_4.AnchorPoint = Vector2.new(0.5, 0.5)
-        Title_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Title_4.BackgroundTransparency = 1.000
-        Title_4.BorderSizePixel = 0
-        Title_4.Position = UDim2.new(0.5, -10, 0.5, 0)
-        Title_4.Size = UDim2.new(1, -50, 1, 0)
-        Title_4.ZIndex = 3
-        Title_4.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        Title_4.Text = "Cool (Purple)"
-        Title_4.TextColor3 = Color3.fromRGB(45, 57, 73)
-        Title_4.TextSize = 14.000
-        Title_4.TextTransparency = 0.180
-        Title_4.TextXAlignment = Enum.TextXAlignment.Left
-        
-        HighContrast.Name = "HighContrast"
-        HighContrast.Parent = Background
-        HighContrast.BackgroundColor3 = Color3.fromRGB(239, 247, 255)
-        HighContrast.BackgroundTransparency = 1.000
-        HighContrast.BorderColor3 = Color3.fromRGB(195, 215, 229)
-        HighContrast.Size = UDim2.new(1, 0, 0, 33)
-        HighContrast.ZIndex = 3
-        HighContrast.AutoButtonColor = false
-        HighContrast.Font = Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
-        HighContrast.Text = ""
-        HighContrast.TextColor3 = Color3.fromRGB(0, 0, 0)
-        HighContrast.TextSize = 14.000
-        
-        Title_5.Name = "Title"
-        Title_5.Parent = HighContrast
-        Title_5.AnchorPoint = Vector2.new(0.5, 0.5)
-        Title_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Title_5.BackgroundTransparency = 1.000
-        Title_5.BorderSizePixel = 0
-        Title_5.Position = UDim2.new(0.5, -10, 0.5, 0)
-        Title_5.Size = UDim2.new(1, -50, 1, 0)
-        Title_5.ZIndex = 3
-        Title_5.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        Title_5.Text = "High Contrast"
-        Title_5.TextColor3 = Color3.fromRGB(45, 57, 73)
-        Title_5.TextSize = 14.000
-        Title_5.TextTransparency = 0.180
-        Title_5.TextXAlignment = Enum.TextXAlignment.Left
-        
-        Warm.Name = "Warm"
-        Warm.Parent = Background
-        Warm.BackgroundColor3 = Color3.fromRGB(239, 247, 255)
-        Warm.BackgroundTransparency = 1.000
-        Warm.BorderColor3 = Color3.fromRGB(195, 215, 229)
-        Warm.Size = UDim2.new(1, 0, 0, 33)
-        Warm.ZIndex = 3
-        Warm.AutoButtonColor = false
-        Warm.Font = Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        Warm.Text = ""
-        Warm.TextColor3 = Color3.fromRGB(0, 0, 0)
-        Warm.TextSize = 14.000
-        
-        Title_6.Name = "Title"
-        Title_6.Parent = Warm
-        Title_6.AnchorPoint = Vector2.new(0.5, 0.5)
-        Title_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Title_6.BackgroundTransparency = 1.000
-        Title_6.BorderSizePixel = 0
-        Title_6.Position = UDim2.new(0.5, -10, 0.5, 0)
-        Title_6.Size = UDim2.new(1, -50, 1, 0)
-        Title_6.ZIndex = 3
-        Title_6.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        Title_6.Text = "Warm"
-        Title_6.TextColor3 = Color3.fromRGB(45, 57, 73)
-        Title_6.TextSize = 14.000
-        Title_6.TextTransparency = 0.180
-        Title_6.TextXAlignment = Enum.TextXAlignment.Left
-        
-        Pastel.Name = "Pastel"
-        Pastel.Parent = Background
-        Pastel.BackgroundColor3 = Color3.fromRGB(239, 247, 255)
-        Pastel.BackgroundTransparency = 1.000
-        Pastel.BorderColor3 = Color3.fromRGB(195, 215, 229)
-        Pastel.Size = UDim2.new(1, 0, 0, 33)
-        Pastel.ZIndex = 3
-        Pastel.AutoButtonColor = false
-        Pastel.Font = Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
-        Pastel.Text = ""
-        Pastel.TextColor3 = Color3.fromRGB(0, 0, 0)
-        Pastel.TextSize = 14.000
-        
-        Title_7.Name = "Title"
-        Title_7.Parent = Pastel
-        Title_7.AnchorPoint = Vector2.new(0.5, 0.5)
-        Title_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Title_7.BackgroundTransparency = 1.000
-        Title_7.BorderSizePixel = 0
-        Title_7.Position = UDim2.new(0.5, -10, 0.5, 0)
-        Title_7.Size = UDim2.new(1, -50, 1, 0)
-        Title_7.ZIndex = 3
-        Title_7.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        Title_7.Text = "Pastel"
-        Title_7.TextColor3 = Color3.fromRGB(45, 57, 73)
-        Title_7.TextSize = 14.000
-        Title_7.TextTransparency = 0.180
-        Title_7.TextXAlignment = Enum.TextXAlignment.Left
-        
-        Monochromatic.Name = "Monochromatic"
-        Monochromatic.Parent = Background
-        Monochromatic.BackgroundColor3 = Color3.fromRGB(239, 247, 255)
-        Monochromatic.BackgroundTransparency = 1.000
-        Monochromatic.BorderColor3 = Color3.fromRGB(195, 215, 229)
-        Monochromatic.Size = UDim2.new(1, 0, 0, 33)
-        Monochromatic.ZIndex = 3
-        Monochromatic.AutoButtonColor = false
-        Monochromatic.Font = Font.new('rbxasset://fonts/families/SourceSansPro.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        Monochromatic.Text = ""
-        Monochromatic.TextColor3 = Color3.fromRGB(0, 0, 0)
-        Monochromatic.TextSize = 14.000
-        
-        Title_8.Name = "Title"
-        Title_8.Parent = Monochromatic
-        Title_8.AnchorPoint = Vector2.new(0.5, 0.5)
-        Title_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Title_8.BackgroundTransparency = 1.000
-        Title_8.BorderSizePixel = 0
-        Title_8.Position = UDim2.new(0.5, -10, 0.5, 0)
-        Title_8.Size = UDim2.new(1, -50, 1, 0)
-        Title_8.ZIndex = 3
-        Title_8.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal);
-        Title_8.Text = "Monochromatic"
-        Title_8.TextColor3 = Color3.fromRGB(45, 57, 73)
-        Title_8.TextSize = 14.000
-        Title_8.TextTransparency = 0.180
-        Title_8.TextXAlignment = Enum.TextXAlignment.Left
-        
-        Location.Name = "Location"
-        Location.Parent = step3
-        Location.AnchorPoint = Vector2.new(0.5, 0.400000006)
-        Location.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Location.BackgroundTransparency = 1.000
-        Location.Position = UDim2.new(0.5, 40, 0.400000006, 0)
-        Location.Size = UDim2.new(0, 300, 0, 35)
-        Location.Image = "rbxassetid://3570695787"
-        Location.ScaleType = Enum.ScaleType.Slice
-        Location.SliceCenter = Rect.new(100, 100, 100, 100)
-        Location.SliceScale = 0.120
-        
-        Title_9.Name = "Title"
-        Title_9.Parent = Location
-        Title_9.AnchorPoint = Vector2.new(1, 0)
-        Title_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Title_9.BackgroundTransparency = 1.000
-        Title_9.BorderSizePixel = 0
-        Title_9.Size = UDim2.new(0, 130, 1, 0)
-        Title_9.Font = Font.new('rbxasset://fonts/families/GothamSSm.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal); 
-        Title_9.Text = "Directory folder"
-        Title_9.TextColor3 = Color3.fromRGB(45, 57, 73)
-        Title_9.TextSize = 14.000
-        Title_9.TextTransparency = 0.100
-        Title_9.TextXAlignment = Enum.TextXAlignment.Left
-        
-        TextBox_.Name = "TextBox_:)"
-        TextBox_.Parent = Location
-        TextBox_.Active = false
-        TextBox_.AnchorPoint = Vector2.new(0.5, 0.5)
-        TextBox_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        TextBox_.BackgroundTransparency = 1.000
-        TextBox_.Position = UDim2.new(0.5, -10, 0.5, 0)
-        TextBox_.Size = UDim2.new(1, -50, 1, 0)
-        TextBox_.ZIndex = 3
-        TextBox_.ClearTextOnFocus = false
-        TextBox_.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
-        TextBox_.ShowNativeInput = false
-        TextBox_.Text = "..\\workspace\\HUBWD"
-        TextBox_.TextColor3 = Color3.fromRGB(45, 57, 73)
-        TextBox_.TextSize = 14.000
-        TextBox_.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-        TextBox_.TextTransparency = 0.160
-        TextBox_.TextXAlignment = Enum.TextXAlignment.Left
-        
-        Icon_2.Name = "Icon"
-        Icon_2.Parent = Location
-        Icon_2.AnchorPoint = Vector2.new(1, 0.5)
-        Icon_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Icon_2.BackgroundTransparency = 1.000
-        Icon_2.Position = UDim2.new(1, -8, 0.5, 0)
-        Icon_2.Size = UDim2.new(0, 19, 0, 19)
-        Icon_2.Image = "rbxassetid://3926305904"
-        Icon_2.ImageColor3 = Color3.fromRGB(143, 143, 143)
-        Icon_2.ImageRectOffset = Vector2.new(504, 4)
-        Icon_2.ImageRectSize = Vector2.new(36, 36)
-        Icon_2.ImageTransparency = 0.200
-        
-        content.Name = "content"
-        content.Parent = step3
-        content.AnchorPoint = Vector2.new(0.5, 0)
-        content.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        content.BackgroundTransparency = 1.000
-        content.Position = UDim2.new(0.5, 0, 0, 110)
-        content.Size = UDim2.new(0, 500, 0, 40)
-        content.Font = Font.new('rbxasset://fonts/families/Arial.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
-        content.Text = "Pick our suggestion or change it "
-        content.TextColor3 = Color3.fromRGB(45, 57, 73)
-        content.TextSize = 16.000
-        content.TextTransparency = 0.380
-        content.TextWrapped = true
-        content.TextYAlignment = Enum.TextYAlignment.Top
-        
-        Title_10.Name = "Title"
-        Title_10.Parent = step3
-        Title_10.AnchorPoint = Vector2.new(0.5, 0)
-        Title_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Title_10.BackgroundTransparency = 1.000
-        Title_10.Position = UDim2.new(0.5, 0, 0, 50)
-        Title_10.Size = UDim2.new(0, 200, 0, 15)
-        Title_10.Font = Font.new('rbxasset://fonts/families/Roboto.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
-        Title_10.Text = "SETUP"
-        Title_10.TextColor3 = Color3.fromRGB(63, 124, 197)
-        Title_10.TextSize = 14.000
-        Title_10.TextWrapped = true
-        
-        Sub_Title.Name = "Sub_Title"
-        Sub_Title.Parent = step3
-        Sub_Title.AnchorPoint = Vector2.new(0.5, 0)
-        Sub_Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Sub_Title.BackgroundTransparency = 1.000
-        Sub_Title.Position = UDim2.new(0.5, 0, 0, 65)
-        Sub_Title.Size = UDim2.new(0, 500, 0, 40)
-        Sub_Title.Font = Font.new('rbxasset://fonts/families/Roboto.json',Enum.FontWeight.Regular,Enum.FontStyle.Normal);
-        Sub_Title.Text = "Choose our preference"
-        Sub_Title.TextColor3 = Color3.fromRGB(45, 57, 73)
-        Sub_Title.TextSize = 34.000
-        Sub_Title.TextWrapped = true
+	-- StarterGui.ScreenGui.Frame.step3.Location.Icon
+	G2L["29"] = Instance.new("ImageLabel", G2L["26"]);
+	G2L["29"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["29"]["ImageColor3"] = Color3.fromRGB(144, 144, 144);
+	G2L["29"]["ImageTransparency"] = 0.20000000298023224;
+	G2L["29"]["AnchorPoint"] = Vector2.new(1, 0.5);
+	G2L["29"]["ImageRectSize"] = Vector2.new(36, 36);
+	G2L["29"]["Size"] = UDim2.new(0, 19, 0, 19);
+	G2L["29"]["Name"] = [[Icon]];
+	G2L["29"]["ImageRectOffset"] = Vector2.new(504, 4);
+	G2L["29"]["BackgroundTransparency"] = 1;
+	G2L["29"]["Position"] = UDim2.new(1, -8, 0.5, 0);
 
-        return{
+	-- StarterGui.ScreenGui.Frame.step3.content
+	G2L["2a"] = Instance.new("TextLabel", G2L["3"]);
+	G2L["2a"]["TextWrapped"] = true;
+	G2L["2a"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+	G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["2a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["2a"]["TextTransparency"] = 0.3799999952316284;
+	G2L["2a"]["TextSize"] = 16;
+	G2L["2a"]["TextColor3"] = Color3.fromRGB(46, 58, 74);
+	G2L["2a"]["AnchorPoint"] = Vector2.new(0.5, 0);
+	G2L["2a"]["Size"] = UDim2.new(0, 500, 0, 40);
+	G2L["2a"]["Text"] = [[Pick our suggestion or change it ]];
+	G2L["2a"]["Name"] = [[content]];
+	G2L["2a"]["BackgroundTransparency"] = 1;
+	G2L["2a"]["Position"] = UDim2.new(0.5, 0, 0, 110);
 
-        }; 
-    end;
-};
+	-- StarterGui.ScreenGui.Frame.step3.Title
+	G2L["2b"] = Instance.new("TextLabel", G2L["3"]);
+	G2L["2b"]["TextWrapped"] = true;
+	G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["2b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["2b"]["TextSize"] = 14;
+	G2L["2b"]["TextColor3"] = Color3.fromRGB(64, 125, 198);
+	G2L["2b"]["AnchorPoint"] = Vector2.new(0.5, 0);
+	G2L["2b"]["Size"] = UDim2.new(0, 200, 0, 15);
+	G2L["2b"]["Text"] = [[SETUP]];
+	G2L["2b"]["Name"] = [[Title]];
+	G2L["2b"]["BackgroundTransparency"] = 1;
+	G2L["2b"]["Position"] = UDim2.new(0.5, 0, 0, 50);
+
+	-- StarterGui.ScreenGui.Frame.step3.Sub_Title
+	G2L["2c"] = Instance.new("TextLabel", G2L["3"]);
+	G2L["2c"]["TextWrapped"] = true;
+	G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["2c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["2c"]["TextSize"] = 34;
+	G2L["2c"]["TextColor3"] = Color3.fromRGB(46, 58, 74);
+	G2L["2c"]["AnchorPoint"] = Vector2.new(0.5, 0);
+	G2L["2c"]["Size"] = UDim2.new(0, 500, 0, 40);
+	G2L["2c"]["Text"] = [[Choose our preference]];
+	G2L["2c"]["Name"] = [[Sub_Title]];
+	G2L["2c"]["BackgroundTransparency"] = 1;
+	G2L["2c"]["Position"] = UDim2.new(0.5, 0, 0, 65);
+
+	-- StarterGui.ScreenGui.Frame.step2
+	G2L["2d"] = Instance.new("Frame", Parent);
+	G2L["2d"]["BorderSizePixel"] = 0;
+	G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["2d"]["BackgroundTransparency"] = 1;
+	G2L["2d"]["Size"] = UDim2.new(1, 0, 1, 0);
+	G2L["2d"]["Visible"] = false;
+	G2L["2d"]["Name"] = [[step2]];
+
+	-- StarterGui.ScreenGui.Frame.step2.Options_Flags
+	G2L["2e"] = Instance.new("Frame", G2L["2d"]);
+	G2L["2e"]["BorderSizePixel"] = 0;
+	G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["2e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+	G2L["2e"]["BackgroundTransparency"] = 1;
+	G2L["2e"]["Size"] = UDim2.new(1, 0, 0, 180);
+	G2L["2e"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+	G2L["2e"]["Name"] = [[Options_Flags]];
+
+	-- StarterGui.ScreenGui.Frame.step2.Options_Flags.UIListLayout
+	G2L["2f"] = Instance.new("UIListLayout", G2L["2e"]);
+	G2L["2f"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+	G2L["2f"]["FillDirection"] = Enum.FillDirection.Horizontal;
+	G2L["2f"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+	G2L["2f"]["Padding"] = UDim.new(0, 15);
+	G2L["2f"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+	-- StarterGui.ScreenGui.Frame.step2.Options_Flags.spain
+	G2L["30"] = Instance.new("ImageLabel", G2L["2e"]);
+	G2L["30"]["SizeConstraint"] = Enum.SizeConstraint.RelativeYY;
+	G2L["30"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
+	G2L["30"]["ScaleType"] = Enum.ScaleType.Slice;
+	G2L["30"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["30"]["SliceScale"] = 0.11999999731779099;
+	G2L["30"]["Size"] = UDim2.new(1, -20, 1, 0);
+	G2L["30"]["Name"] = [[spain]];
+	G2L["30"]["BackgroundTransparency"] = 1;
+
+	-- StarterGui.ScreenGui.Frame.step2.Options_Flags.spain.call
+	G2L["31"] = Instance.new("TextButton", G2L["30"]);
+	G2L["31"]["ZIndex"] = 8;
+	G2L["31"]["AutoButtonColor"] = false;
+	G2L["31"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["31"]["TextSize"] = 14;
+	G2L["31"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["31"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["31"]["Size"] = UDim2.new(1, 0, 1, 0);
+	G2L["31"]["Name"] = [[call]];
+	G2L["31"]["Text"] = [[]];
+	G2L["31"]["BackgroundTransparency"] = 1;
+
+	-- StarterGui.ScreenGui.Frame.step2.Options_Flags.spain.Title
+	G2L["32"] = Instance.new("TextLabel", G2L["30"]);
+	G2L["32"]["ZIndex"] = 3;
+	G2L["32"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["32"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["32"]["TextSize"] = 18;
+	G2L["32"]["TextColor3"] = Color3.fromRGB(44, 52, 64);
+	G2L["32"]["AnchorPoint"] = Vector2.new(0.5, 0.699999988079071);
+	G2L["32"]["Size"] = UDim2.new(1, 0, 0, 20);
+	G2L["32"]["Text"] = [[Spanish]];
+	G2L["32"]["Name"] = [[Title]];
+	G2L["32"]["BackgroundTransparency"] = 1;
+	G2L["32"]["Position"] = UDim2.new(0.5, 0, 0.699999988079071, 0);
+
+	-- StarterGui.ScreenGui.Frame.step2.Options_Flags.spain.flag
+	G2L["33"] = Instance.new("ImageLabel", G2L["30"]);
+	G2L["33"]["ZIndex"] = 3;
+	G2L["33"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["33"]["AnchorPoint"] = Vector2.new(0.5, 0.20000000298023224);
+	G2L["33"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
+	G2L["33"]["Size"] = UDim2.new(0, 75, 0, 75);
+	G2L["33"]["Name"] = [[flag]];
+	G2L["33"]["BackgroundTransparency"] = 1;
+	G2L["33"]["Position"] = UDim2.new(0.5, 0, 0.20000000298023224, 0);
+
+	-- StarterGui.ScreenGui.Frame.step2.Options_Flags.spain._background
+	G2L["34"] = Instance.new("ImageLabel", G2L["30"]);
+	G2L["34"]["ZIndex"] = 2;
+	G2L["34"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
+	G2L["34"]["ScaleType"] = Enum.ScaleType.Slice;
+	G2L["34"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["34"]["SliceScale"] = 0.10000000149011612;
+	G2L["34"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+	G2L["34"]["Size"] = UDim2.new(1, -4, 1, -4);
+	G2L["34"]["Name"] = [[_background]];
+	G2L["34"]["BackgroundTransparency"] = 1;
+	G2L["34"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+	-- StarterGui.ScreenGui.Frame.step2.Options_Flags.german
+	G2L["35"] = Instance.new("ImageLabel", G2L["2e"]);
+	G2L["35"]["SizeConstraint"] = Enum.SizeConstraint.RelativeYY;
+	G2L["35"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
+	G2L["35"]["ScaleType"] = Enum.ScaleType.Slice;
+	G2L["35"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["35"]["SliceScale"] = 0.11999999731779099;
+	G2L["35"]["Size"] = UDim2.new(1, -20, 1, 0);
+	G2L["35"]["Name"] = [[german]];
+	G2L["35"]["BackgroundTransparency"] = 1;
+
+	-- StarterGui.ScreenGui.Frame.step2.Options_Flags.german.call
+	G2L["36"] = Instance.new("TextButton", G2L["35"]);
+	G2L["36"]["ZIndex"] = 8;
+	G2L["36"]["AutoButtonColor"] = false;
+	G2L["36"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["36"]["TextSize"] = 14;
+	G2L["36"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["36"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["36"]["Size"] = UDim2.new(1, 0, 1, 0);
+	G2L["36"]["Name"] = [[call]];
+	G2L["36"]["Text"] = [[]];
+	G2L["36"]["BackgroundTransparency"] = 1;
+
+	-- StarterGui.ScreenGui.Frame.step2.Options_Flags.german.Title
+	G2L["37"] = Instance.new("TextLabel", G2L["35"]);
+	G2L["37"]["ZIndex"] = 3;
+	G2L["37"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["37"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["37"]["TextSize"] = 18;
+	G2L["37"]["TextColor3"] = Color3.fromRGB(44, 52, 64);
+	G2L["37"]["AnchorPoint"] = Vector2.new(0.5, 0.699999988079071);
+	G2L["37"]["Size"] = UDim2.new(1, 0, 0, 20);
+	G2L["37"]["Text"] = [[German]];
+	G2L["37"]["Name"] = [[Title]];
+	G2L["37"]["BackgroundTransparency"] = 1;
+	G2L["37"]["Position"] = UDim2.new(0.5, 0, 0.699999988079071, 0);
+
+	-- StarterGui.ScreenGui.Frame.step2.Options_Flags.german.flag
+	G2L["38"] = Instance.new("ImageLabel", G2L["35"]);
+	G2L["38"]["ZIndex"] = 3;
+	G2L["38"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["38"]["AnchorPoint"] = Vector2.new(0.5, 0.20000000298023224);
+	G2L["38"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
+	G2L["38"]["Size"] = UDim2.new(0, 75, 0, 75);
+	G2L["38"]["Name"] = [[flag]];
+	G2L["38"]["BackgroundTransparency"] = 1;
+	G2L["38"]["Position"] = UDim2.new(0.5, 0, 0.20000000298023224, 0);
+
+	-- StarterGui.ScreenGui.Frame.step2.Options_Flags.german._background
+	G2L["39"] = Instance.new("ImageLabel", G2L["35"]);
+	G2L["39"]["ZIndex"] = 2;
+	G2L["39"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
+	G2L["39"]["ScaleType"] = Enum.ScaleType.Slice;
+	G2L["39"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["39"]["SliceScale"] = 0.10000000149011612;
+	G2L["39"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+	G2L["39"]["Size"] = UDim2.new(1, -4, 1, -4);
+	G2L["39"]["Name"] = [[_background]];
+	G2L["39"]["BackgroundTransparency"] = 1;
+	G2L["39"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+	-- StarterGui.ScreenGui.Frame.step2.Options_Flags.brazil
+	G2L["3a"] = Instance.new("ImageLabel", G2L["2e"]);
+	G2L["3a"]["SizeConstraint"] = Enum.SizeConstraint.RelativeYY;
+	G2L["3a"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
+	G2L["3a"]["ScaleType"] = Enum.ScaleType.Slice;
+	G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["3a"]["SliceScale"] = 0.11999999731779099;
+	G2L["3a"]["Size"] = UDim2.new(1, -20, 1, 0);
+	G2L["3a"]["Name"] = [[brazil]];
+	G2L["3a"]["BackgroundTransparency"] = 1;
+
+	-- StarterGui.ScreenGui.Frame.step2.Options_Flags.brazil.call
+	G2L["3b"] = Instance.new("TextButton", G2L["3a"]);
+	G2L["3b"]["ZIndex"] = 8;
+	G2L["3b"]["AutoButtonColor"] = false;
+	G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["3b"]["TextSize"] = 14;
+	G2L["3b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["3b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["3b"]["Size"] = UDim2.new(1, 0, 1, 0);
+	G2L["3b"]["Name"] = [[call]];
+	G2L["3b"]["Text"] = [[]];
+	G2L["3b"]["BackgroundTransparency"] = 1;
+
+	-- StarterGui.ScreenGui.Frame.step2.Options_Flags.brazil.Title
+	G2L["3c"] = Instance.new("TextLabel", G2L["3a"]);
+	G2L["3c"]["ZIndex"] = 3;
+	G2L["3c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["3c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["3c"]["TextSize"] = 18;
+	G2L["3c"]["TextColor3"] = Color3.fromRGB(44, 52, 64);
+	G2L["3c"]["AnchorPoint"] = Vector2.new(0.5, 0.699999988079071);
+	G2L["3c"]["Size"] = UDim2.new(1, 0, 0, 20);
+	G2L["3c"]["Text"] = [[Portugueses]];
+	G2L["3c"]["Name"] = [[Title]];
+	G2L["3c"]["BackgroundTransparency"] = 1;
+	G2L["3c"]["Position"] = UDim2.new(0.5, 0, 0.699999988079071, 0);
+
+	-- StarterGui.ScreenGui.Frame.step2.Options_Flags.brazil.flag
+	G2L["3d"] = Instance.new("ImageLabel", G2L["3a"]);
+	G2L["3d"]["ZIndex"] = 3;
+	G2L["3d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["3d"]["AnchorPoint"] = Vector2.new(0.5, 0.20000000298023224);
+	G2L["3d"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
+	G2L["3d"]["Size"] = UDim2.new(0, 75, 0, 75);
+	G2L["3d"]["Name"] = [[flag]];
+	G2L["3d"]["BackgroundTransparency"] = 1;
+	G2L["3d"]["Position"] = UDim2.new(0.5, 0, 0.20000000298023224, 0);
+
+	-- StarterGui.ScreenGui.Frame.step2.Options_Flags.brazil._background
+	G2L["3e"] = Instance.new("ImageLabel", G2L["3a"]);
+	G2L["3e"]["ZIndex"] = 2;
+	G2L["3e"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
+	G2L["3e"]["ScaleType"] = Enum.ScaleType.Slice;
+	G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["3e"]["SliceScale"] = 0.10000000149011612;
+	G2L["3e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+	G2L["3e"]["Size"] = UDim2.new(1, -4, 1, -4);
+	G2L["3e"]["Name"] = [[_background]];
+	G2L["3e"]["BackgroundTransparency"] = 1;
+	G2L["3e"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+	-- StarterGui.ScreenGui.Frame.step2.Options_Flags.united-states
+	G2L["3f"] = Instance.new("ImageLabel", G2L["2e"]);
+	G2L["3f"]["SizeConstraint"] = Enum.SizeConstraint.RelativeYY;
+	G2L["3f"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
+	G2L["3f"]["ScaleType"] = Enum.ScaleType.Slice;
+	G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["3f"]["SliceScale"] = 0.11999999731779099;
+	G2L["3f"]["Size"] = UDim2.new(1, -20, 1, 0);
+	G2L["3f"]["Name"] = [[united-states]];
+	G2L["3f"]["BackgroundTransparency"] = 1;
+
+	-- StarterGui.ScreenGui.Frame.step2.Options_Flags.united-states.call
+	G2L["40"] = Instance.new("TextButton", G2L["3f"]);
+	G2L["40"]["ZIndex"] = 8;
+	G2L["40"]["AutoButtonColor"] = false;
+	G2L["40"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["40"]["TextSize"] = 14;
+	G2L["40"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["40"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["40"]["Size"] = UDim2.new(1, 0, 1, 0);
+	G2L["40"]["Name"] = [[call]];
+	G2L["40"]["Text"] = [[]];
+	G2L["40"]["BackgroundTransparency"] = 1;
+
+	-- StarterGui.ScreenGui.Frame.step2.Options_Flags.united-states.Title
+	G2L["41"] = Instance.new("TextLabel", G2L["3f"]);
+	G2L["41"]["ZIndex"] = 3;
+	G2L["41"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["41"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["41"]["TextSize"] = 18;
+	G2L["41"]["TextColor3"] = Color3.fromRGB(44, 52, 64);
+	G2L["41"]["AnchorPoint"] = Vector2.new(0.5, 0.699999988079071);
+	G2L["41"]["Size"] = UDim2.new(1, 0, 0, 20);
+	G2L["41"]["Text"] = [[English]];
+	G2L["41"]["Name"] = [[Title]];
+	G2L["41"]["BackgroundTransparency"] = 1;
+	G2L["41"]["Position"] = UDim2.new(0.5, 0, 0.699999988079071, 0);
+
+	-- StarterGui.ScreenGui.Frame.step2.Options_Flags.united-states.flag
+	G2L["42"] = Instance.new("ImageLabel", G2L["3f"]);
+	G2L["42"]["ZIndex"] = 3;
+	G2L["42"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["42"]["AnchorPoint"] = Vector2.new(0.5, 0.20000000298023224);
+	G2L["42"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
+	G2L["42"]["Size"] = UDim2.new(0, 75, 0, 75);
+	G2L["42"]["Name"] = [[flag]];
+	G2L["42"]["BackgroundTransparency"] = 1;
+	G2L["42"]["Position"] = UDim2.new(0.5, 0, 0.20000000298023224, 0);
+
+	-- StarterGui.ScreenGui.Frame.step2.Options_Flags.united-states._background
+	G2L["43"] = Instance.new("ImageLabel", G2L["3f"]);
+	G2L["43"]["ZIndex"] = 2;
+	G2L["43"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
+	G2L["43"]["ScaleType"] = Enum.ScaleType.Slice;
+	G2L["43"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["43"]["SliceScale"] = 0.10000000149011612;
+	G2L["43"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+	G2L["43"]["Size"] = UDim2.new(1, -4, 1, -4);
+	G2L["43"]["Name"] = [[_background]];
+	G2L["43"]["BackgroundTransparency"] = 1;
+	G2L["43"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+	-- StarterGui.ScreenGui.Frame.step2.content
+	G2L["44"] = Instance.new("TextLabel", G2L["2d"]);
+	G2L["44"]["TextWrapped"] = true;
+	G2L["44"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+	G2L["44"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["44"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["44"]["TextTransparency"] = 0.3799999952316284;
+	G2L["44"]["TextSize"] = 16;
+	G2L["44"]["TextColor3"] = Color3.fromRGB(46, 58, 74);
+	G2L["44"]["AnchorPoint"] = Vector2.new(0.5, 0);
+	G2L["44"]["Size"] = UDim2.new(0, 500, 0, 40);
+	G2L["44"]["Text"] = [[Pick our suggestion or change it ]];
+	G2L["44"]["Name"] = [[content]];
+	G2L["44"]["BackgroundTransparency"] = 1;
+	G2L["44"]["Position"] = UDim2.new(0.5, 0, 0, 110);
+
+	-- StarterGui.ScreenGui.Frame.step2.Sub_Title
+	G2L["45"] = Instance.new("TextLabel", G2L["2d"]);
+	G2L["45"]["TextWrapped"] = true;
+	G2L["45"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["45"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["45"]["TextSize"] = 34;
+	G2L["45"]["TextColor3"] = Color3.fromRGB(46, 58, 74);
+	G2L["45"]["AnchorPoint"] = Vector2.new(0.5, 0);
+	G2L["45"]["Size"] = UDim2.new(0, 500, 0, 40);
+	G2L["45"]["Text"] = [[Confirm your text language]];
+	G2L["45"]["Name"] = [[Sub_Title]];
+	G2L["45"]["BackgroundTransparency"] = 1;
+	G2L["45"]["Position"] = UDim2.new(0.5, 0, 0, 65);
+
+	-- StarterGui.ScreenGui.Frame.step2.Title
+	G2L["46"] = Instance.new("TextLabel", G2L["2d"]);
+	G2L["46"]["TextWrapped"] = true;
+	G2L["46"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["46"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["46"]["TextSize"] = 14;
+	G2L["46"]["TextColor3"] = Color3.fromRGB(64, 125, 198);
+	G2L["46"]["AnchorPoint"] = Vector2.new(0.5, 0);
+	G2L["46"]["Size"] = UDim2.new(0, 200, 0, 15);
+	G2L["46"]["Text"] = [[SETUP]];
+	G2L["46"]["Name"] = [[Title]];
+	G2L["46"]["BackgroundTransparency"] = 1;
+	G2L["46"]["Position"] = UDim2.new(0.5, 0, 0, 50);
+
+	-- StarterGui.ScreenGui.Frame.step2.Button
+	G2L["47"] = Instance.new("ImageLabel", G2L["2d"]);
+	G2L["47"]["ZIndex"] = 3;
+	G2L["47"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
+	G2L["47"]["ScaleType"] = Enum.ScaleType.Slice;
+	G2L["47"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["47"]["ImageColor3"] = Color3.fromRGB(47, 136, 255);
+	G2L["47"]["Visible"] = false;
+	G2L["47"]["AnchorPoint"] = Vector2.new(0.5, 1);
+	G2L["47"]["Size"] = UDim2.new(0, 184, 0, 50);
+	G2L["47"]["Name"] = [[Button]];
+	G2L["47"]["BackgroundTransparency"] = 1;
+	G2L["47"]["Position"] = UDim2.new(0.5, 0, 1, -90);
+
+	-- StarterGui.ScreenGui.Frame.step2.Button.Sub_Frame
+	G2L["48"] = Instance.new("Frame", G2L["47"]);
+	G2L["48"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["48"]["BackgroundTransparency"] = 1;
+	G2L["48"]["Size"] = UDim2.new(1, 0, 0, 20);
+	G2L["48"]["Position"] = UDim2.new(0, 0, 1, 0);
+	G2L["48"]["Name"] = [[Sub_Frame]];
+
+	-- StarterGui.ScreenGui.Frame.step2.Button.Sub_Frame.arrow_left
+	G2L["49"] = Instance.new("ImageLabel", G2L["48"]);
+	G2L["49"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["49"]["ImageColor3"] = Color3.fromRGB(48, 48, 48);
+	G2L["49"]["ImageTransparency"] = 0.25;
+	G2L["49"]["AnchorPoint"] = Vector2.new(0, 0.5);
+	G2L["49"]["ImageRectSize"] = Vector2.new(36, 36);
+	G2L["49"]["Size"] = UDim2.new(0, 15, 0, 15);
+	G2L["49"]["Name"] = [[arrow_left]];
+	G2L["49"]["ImageRectOffset"] = Vector2.new(364, 524);
+	G2L["49"]["BackgroundTransparency"] = 1;
+	G2L["49"]["Position"] = UDim2.new(0, 110, 0.5, 0);
+
+	-- StarterGui.ScreenGui.Frame.step2.Button.Sub_Frame.Text
+	G2L["4a"] = Instance.new("TextLabel", G2L["48"]);
+	G2L["4a"]["ZIndex"] = 4;
+	G2L["4a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["4a"]["TextXAlignment"] = Enum.TextXAlignment.Right;
+	G2L["4a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["4a"]["TextTransparency"] = 0.25;
+	G2L["4a"]["TextSize"] = 12;
+	G2L["4a"]["TextColor3"] = Color3.fromRGB(48, 48, 48);
+	G2L["4a"]["Size"] = UDim2.new(0.6000000238418579, 0, 1, 0);
+	G2L["4a"]["Text"] = [[Press Enter]];
+	G2L["4a"]["Name"] = [[Text]];
+	G2L["4a"]["BackgroundTransparency"] = 1;
+
+	-- StarterGui.ScreenGui.Frame.step2.Button.call
+	G2L["4b"] = Instance.new("TextButton", G2L["47"]);
+	G2L["4b"]["ZIndex"] = 4;
+	G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["4b"]["TextSize"] = 16;
+	G2L["4b"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["4b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["4b"]["Size"] = UDim2.new(1, 0, 1, 0);
+	G2L["4b"]["Name"] = [[call]];
+	G2L["4b"]["Text"] = [[Continue]];
+	G2L["4b"]["BackgroundTransparency"] = 1;
+
+	-- StarterGui.ScreenGui.Frame.step1
+	G2L["4c"] = Instance.new("Frame", Parent);
+	G2L["4c"]["BorderSizePixel"] = 0;
+	G2L["4c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["4c"]["BackgroundTransparency"] = 1;
+	G2L["4c"]["Size"] = UDim2.new(1, 0, 1, 0);
+	G2L["4c"]["Name"] = [[step1]];
+
+	-- StarterGui.ScreenGui.Frame.step1.Button
+	G2L["4d"] = Instance.new("ImageLabel", G2L["4c"]);
+	G2L["4d"]["ZIndex"] = 3;
+	G2L["4d"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
+	G2L["4d"]["ScaleType"] = Enum.ScaleType.Slice;
+	G2L["4d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["4d"]["ImageColor3"] = Color3.fromRGB(47, 136, 255);
+	G2L["4d"]["AnchorPoint"] = Vector2.new(0.5, 1);
+	G2L["4d"]["Size"] = UDim2.new(0, 184, 0, 50);
+	G2L["4d"]["Name"] = [[Button]];
+	G2L["4d"]["BackgroundTransparency"] = 1;
+	G2L["4d"]["Position"] = UDim2.new(0.5, 0, 1, -90);
+
+	-- StarterGui.ScreenGui.Frame.step1.Button.Sub_Frame
+	G2L["4e"] = Instance.new("Frame", G2L["4d"]);
+	G2L["4e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["4e"]["BackgroundTransparency"] = 1;
+	G2L["4e"]["Size"] = UDim2.new(1, 0, 0, 20);
+	G2L["4e"]["Position"] = UDim2.new(0, 0, 1, 0);
+	G2L["4e"]["Name"] = [[Sub_Frame]];
+
+	-- StarterGui.ScreenGui.Frame.step1.Button.Sub_Frame.arrow_left
+	G2L["4f"] = Instance.new("ImageLabel", G2L["4e"]);
+	G2L["4f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["4f"]["ImageColor3"] = Color3.fromRGB(48, 48, 48);
+	G2L["4f"]["ImageTransparency"] = 0.25;
+	G2L["4f"]["AnchorPoint"] = Vector2.new(0, 0.5);
+	G2L["4f"]["ImageRectSize"] = Vector2.new(36, 36);
+	G2L["4f"]["Size"] = UDim2.new(0, 15, 0, 15);
+	G2L["4f"]["Name"] = [[arrow_left]];
+	G2L["4f"]["ImageRectOffset"] = Vector2.new(364, 524);
+	G2L["4f"]["BackgroundTransparency"] = 1;
+	G2L["4f"]["Position"] = UDim2.new(0, 110, 0.5, 0);
+
+	-- StarterGui.ScreenGui.Frame.step1.Button.Sub_Frame.Text
+	G2L["50"] = Instance.new("TextLabel", G2L["4e"]);
+	G2L["50"]["ZIndex"] = 4;
+	G2L["50"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["50"]["TextXAlignment"] = Enum.TextXAlignment.Right;
+	G2L["50"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["50"]["TextTransparency"] = 0.25;
+	G2L["50"]["TextSize"] = 12;
+	G2L["50"]["TextColor3"] = Color3.fromRGB(48, 48, 48);
+	G2L["50"]["Size"] = UDim2.new(0.6000000238418579, 0, 1, 0);
+	G2L["50"]["Text"] = [[Press Enter]];
+	G2L["50"]["Name"] = [[Text]];
+	G2L["50"]["BackgroundTransparency"] = 1;
+
+	-- StarterGui.ScreenGui.Frame.step1.Button.call
+	G2L["51"] = Instance.new("TextButton", G2L["4d"]);
+	G2L["51"]["ZIndex"] = 4;
+	G2L["51"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["51"]["TextSize"] = 16;
+	G2L["51"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["51"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["51"]["Size"] = UDim2.new(1, 0, 1, 0);
+	G2L["51"]["Name"] = [[call]];
+	G2L["51"]["Text"] = [[Let's Start]];
+	G2L["51"]["BackgroundTransparency"] = 1;
+
+	-- StarterGui.ScreenGui.Frame.step1.Sub_title
+	G2L["52"] = Instance.new("TextLabel", G2L["4c"]);
+	G2L["52"]["TextWrapped"] = true;
+	G2L["52"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+	G2L["52"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["52"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+	G2L["52"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["52"]["TextTransparency"] = 0.41999998688697815;
+	G2L["52"]["TextSize"] = 21;
+	G2L["52"]["TextColor3"] = Color3.fromRGB(54, 54, 54);
+	G2L["52"]["Size"] = UDim2.new(0, 530, 0, 50);
+	G2L["52"]["Text"] = [[Let's get to know you so you can start using the Scripts soon!]];
+	G2L["52"]["Name"] = [[Sub_title]];
+	G2L["52"]["BackgroundTransparency"] = 1;
+	G2L["52"]["Position"] = UDim2.new(0, 140, 0, 190);
+
+	-- StarterGui.ScreenGui.Frame.step1.Title
+	G2L["53"] = Instance.new("TextLabel", G2L["4c"]);
+	G2L["53"]["TextYAlignment"] = Enum.TextYAlignment.Bottom;
+	G2L["53"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["53"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+	G2L["53"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+	G2L["53"]["TextTransparency"] = 0.20000000298023224;
+	G2L["53"]["TextSize"] = 50;
+	G2L["53"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["53"]["AnchorPoint"] = Vector2.new(0.5, 0);
+	G2L["53"]["Size"] = UDim2.new(0, 680, 0, 130);
+	G2L["53"]["Text"] = "Hey! 👋\nWelcome to HUBWD";
+	G2L["53"]["Name"] = [[Title]];
+	G2L["53"]["BackgroundTransparency"] = 1;
+	G2L["53"]["Position"] = UDim2.new(0.5, 0, 0, 53);
+
+	do --Load Flag
+		HUBWD_Installer.vector={}
+		HUBWD_Installer.circle={}
+		
+		G2L["33"].Image=getUnifiedSource('image/flags/spain.png')
+		G2L["38"].Image=getUnifiedSource('image/flags/deutschland.png')
+		G2L["3d"].Image=getUnifiedSource('image/flags/brazil.png')
+		G2L["42"].Image=getUnifiedSource('image/flags/united-states.png')
+		for index,value in pairs{G2L["49"],G2L["LOL"],G2L["4f"],G2L["c"],G2L["11"],G2L["29"]}do
+			table.insert(HUBWD_Installer.vector,value)
+		end;
+		for index,value in pairs{G2L["26"],G2L["30"],G2L["34"],G2L["35"],G2L["39"],G2L["3a"],
+		G2L["3e"],G2L["3f"],G2L["43"],G2L["47"],G2L["4d"],G2L["14"],G2L["f"],G2L["a"],G2L["4"]}do
+			table.insert(HUBWD_Installer.circle,value)
+		end;
+	end 
+	do -- fixed high contrast theme
+		-- I had to fix this because the "High Contrast" theme was buggy and there were many missing values for it to work
+		G2L["1e"]:Destroy() -- removing a UI element that was causing issues
+		G2L["15"].CanvasSize = UDim2.new(0,0,0,G2L["17"].AbsoluteContentSize.Y) -- adjusting the size of a container element to fit the contents
+	end;
+
+	return {
+        -- Step 1
+        ['title']=G2L["53"];
+        ['sub_title']=G2L["52"];
+        ['call']=G2L["51"];
+        ['press']=G2L["50"];
+        --Step 2
+        ['content']=G2L["45"];
+        ['subtitle']=G2L["44"];
+        ['spain']=G2L["32"];
+        ['german']=G2L["37"];
+        ['brazil']=G2L["3c"];
+        ['english']=G2L["41"];
+        ['call_step2']=G2L["4b"];
+        ['press_step2']=G2L["4a"];
+        --Step 3
+        ['content_step3']=G2L["2a"];
+        ['subtitle_step3']=G2L["2c"];
+        ['location_title']=G2L["27"];
+        ['theme_title']=G2L["10"];
+        ['text_1']=G2L["6"];
+        ['text_2']=G2L["7"];
+        ['call_step3']=G2L["e"];
+        ['press_step3']=G2L["d"];
+		--Main
+		['step1']=G2L["4c"];
+		['step2']=G2L["2d"];
+		['step3']=G2L["3"];
+	}
+end)(HUBWD_Installer.ScreenGui:FindFirstChild'main')
